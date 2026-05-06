@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Comment passer de Pennylane à IO BILL en 30 minutes | Blog IO BILL</title>
+<meta name="description" content="Guide pratique de migration depuis Pennylane vers IO BILL : export de vos données, import dans IO BILL, paramétrage TVA et URSSAF, redirection des flux Stripe et bancaires. Délai indicatif : 30 minutes pour un freelance, 2 heures pour une TPE."/>
+<meta name="keywords" content="migration Pennylane IO BILL, export Pennylane, importer factures Pennylane, alternative Pennylane, changer logiciel facturation"/>
+<link rel="canonical" href="https://www.iobill.online/blog/migration-pennylane-iobill"/>
+<link rel="alternate" hreflang="fr-FR" href="https://www.iobill.online/blog/migration-pennylane-iobill"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<meta name="theme-color" content="#0c0b0f"/>
+<meta name="author" content="OWL'S INDUSTRY"/>
+
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://www.iobill.online/blog/migration-pennylane-iobill"/>
+<meta property="og:title" content="Comment passer de Pennylane à IO BILL en 30 minutes"/>
+<meta property="og:description" content="Guide pratique de migration depuis Pennylane vers IO BILL : export de vos données, import dans IO BILL, paramétrage TVA et URSSAF, redirection des flux Stripe et bancaires. Délai indicatif : 30 minutes pour un freelance, 2 heures pour une TPE."/>
+<meta property="og:image" content="https://www.iobill.online/og-image.png"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:site_name" content="IO BILL"/>
+<meta property="article:published_time" content="2026-04-22T08:00:00+02:00"/>
+<meta property="article:author" content="OWL'S INDUSTRY"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Comment passer de Pennylane à IO BILL en 30 minutes"/>
+<meta name="twitter:description" content="Guide pratique de migration depuis Pennylane vers IO BILL : export de vos données, import dans IO BILL, paramétrage TVA et URSSAF, redirection des flux Stripe et bancaires. Délai indicatif : 30 minutes pour un freelance, 2 heures pour une TPE."/>
+<meta name="twitter:image" content="https://www.iobill.online/og-image.png"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles-seo.css"/>
+
+<script defer data-domain="iobill.online" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.iobill.online/blog/migration-pennylane-iobill"
+  },
+  "headline": "Comment passer de Pennylane à IO BILL en 30 minutes",
+  "description": "Guide pratique de migration depuis Pennylane vers IO BILL : export de vos données, import dans IO BILL, paramétrage TVA et URSSAF, redirection des flux Stripe et bancaires. Délai indicatif : 30 minutes pour un freelance, 2 heures pour une TPE.",
+  "image": "https://www.iobill.online/og-image.png",
+  "author": {
+    "@type": "Organization",
+    "name": "OWL'S INDUSTRY",
+    "url": "https://www.iobill.online/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "OWL'S INDUSTRY",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.iobill.online/favicon.svg"
+    }
+  },
+  "datePublished": "2026-04-22",
+  "dateModified": "2026-04-22",
+  "inLanguage": "fr-FR"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://www.iobill.online/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.iobill.online/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Comment passer de Pennylane à IO BILL en 30 minutes",
+      "item": "https://www.iobill.online/blog/migration-pennylane-iobill"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+
+<nav class="site-nav" aria-label="Navigation principale">
+  <a href="/" class="nav-logo">
+    IO <span>BILL</span>
+  </a>
+  <div class="nav-links">
+    <a href="/fonctionnalites">Fonctionnalités</a>
+    <a href="/tarifs">Tarifs</a>
+    <a href="/pour-qui/freelance">Pour qui ?</a>
+    <a href="/blog" style="color:var(--gold);">Blog</a>
+    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=nav&utm_campaign=launch" class="btn btn-ghost" style="padding:10px 22px;font-size:13px;">Connexion</a>
+    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=nav&utm_campaign=launch" class="btn btn-gold" style="padding:10px 22px;font-size:13px;" data-plausible-event-name="cta_top_nav">Essayer 14 jours</a>
+  </div>
+</nav>
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span style="color:var(--text);">Comment passer de Pennylane à IO BILL en 30 minutes</span>
+</nav>
+
+<main id="main" class="page">
+
+  <header class="page-header">
+    <div class="page-eyebrow">Tutoriel</div>
+    <h1>Migration Pennylane → IO BILL : <em>le guide en 30 minutes</em></h1>
+    <div style="font-size:13px;color:var(--muted);margin-top:12px;font-family:'JetBrains Mono',monospace;">
+      Publié le 2026-04-22 · Temps de lecture : 8 min · Par OWL'S INDUSTRY
+    </div>
+  </header>
+
+  <article>
+
+    <p class="page-lead">Vous utilisez Pennylane et envisagez de basculer vers IO BILL pour des raisons de coût, de simplicité ou de proximité française ? Ce guide pratique détaille la procédure complète, du téléchargement de vos données Pennylane à la mise en service d'IO BILL. Pour un freelance, comptez 30 minutes ; pour une TPE avec plusieurs années d'historique, 2 heures.</p>
+
+    <h2>1. Ce que vous récupérez de Pennylane</h2>
+    <p>Pennylane permet l'export de l'ensemble de vos données depuis votre espace, rubrique <em>Paramètres → Export</em>. Les formats disponibles sont :</p>
+    <ul>
+      <li><strong>Clients &amp; fournisseurs</strong> : CSV avec raison sociale, SIRET, adresse, email, conditions de paiement ;</li>
+      <li><strong>Factures émises</strong> : ZIP contenant les PDFs + un CSV récapitulatif (numéro, date, montant, TVA, statut paiement) ;</li>
+      <li><strong>Devis</strong> : idem ;</li>
+      <li><strong>Achats</strong> : ZIP de justificatifs + CSV avec affectation comptable ;</li>
+      <li><strong>Comptabilité</strong> : FEC (Fichier des Écritures Comptables) si vous êtes au régime BNC réel ou BIC réel.</li>
+    </ul>
+    <p>Comptez environ 5 minutes de génération côté Pennylane (l'export est asynchrone et arrive par email).</p>
+
+    <h2>2. Préparer votre compte IO BILL</h2>
+    <p>Si vous n'avez pas encore de compte IO BILL :</p>
+    <ol>
+      <li>Créez votre compte sur <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=blog&utm_campaign=migration_pennylane">app.iobill.online</a> (essai gratuit 14 jours sans CB) ;</li>
+      <li>Renseignez votre SIRET — IO BILL pré-remplit automatiquement votre raison sociale, adresse et code NAF via SIRENE ;</li>
+      <li>Choisissez votre régime fiscal et social (micro-BNC, BIC, BNC réel, etc.) ;</li>
+      <li>Configurez vos taux de TVA par défaut.</li>
+    </ol>
+
+    <h2>3. Importer vos clients et fournisseurs</h2>
+    <p>IO BILL accepte directement le CSV Pennylane sans transformation. Depuis votre espace IO BILL :</p>
+    <ol>
+      <li>Allez dans <em>Contacts → Importer</em> ;</li>
+      <li>Sélectionnez votre fichier <code>clients.csv</code> Pennylane ;</li>
+      <li>IO BILL détecte automatiquement les colonnes et propose un mappage ;</li>
+      <li>Validez — les contacts sont importés en moins d'une minute (jusqu'à 5 000 contacts).</li>
+    </ol>
+    <p>Les SIRET déjà renseignés dans Pennylane sont automatiquement enrichis par IO BILL avec les informations actualisées (nouveau dirigeant, déménagement, statut administratif) via l'API SIRENE.</p>
+
+    <h2>4. Importer vos factures émises</h2>
+    <p>Pour conserver la traçabilité historique, IO BILL accepte l'import des factures Pennylane sous forme d'archive :</p>
+    <ol>
+      <li>Allez dans <em>Documents → Import historique</em> ;</li>
+      <li>Téléversez votre ZIP Pennylane (PDFs + CSV) ;</li>
+      <li>IO BILL traite chaque PDF, extrait les données, et crée des factures "historisées" non éditables ;</li>
+      <li>La numérotation est conservée à l'identique pour respecter la continuité.</li>
+    </ol>
+    <p>Les factures historiques apparaissent dans votre journal des ventes mais ne génèrent pas de nouvelles écritures comptables (puisqu'elles sont déjà en compta dans Pennylane). Elles servent uniquement à l'audit et à la consultation.</p>
+
+    <p><strong>Astuce</strong> : si vous changez de logiciel en milieu d'année, démarrez la nouvelle numérotation IO BILL au numéro suivant la dernière émise dans Pennylane. Par exemple, dernière facture Pennylane = F2026-042 → première IO BILL = F2026-043. La continuité de la numérotation est <strong>une obligation légale</strong>.</p>
+
+    <h2>5. Connecter votre banque DSP2</h2>
+    <p>Si vous aviez connecté votre banque dans Pennylane (synchronisation des écritures), refaites le même geste dans IO BILL :</p>
+    <ol>
+      <li><em>Banque → Connecter un compte</em> ;</li>
+      <li>Choisissez votre banque dans la liste (250+ établissements supportés) ;</li>
+      <li>Authentifiez-vous via le tunnel sécurisé Bridge by BPCE ;</li>
+      <li>Donnez votre consentement DSP2 (90 jours, renouvelable automatiquement).</li>
+    </ol>
+    <p>IO BILL récupère automatiquement les 90 derniers jours d'écritures et les confronte à vos factures importées pour réaliser un auto-lettrage rétroactif.</p>
+
+    <h2>6. Reconfigurer vos Payment Links Stripe</h2>
+    <p>Si vous utilisiez les Payment Links Pennylane → Stripe pour faire payer vos clients en ligne :</p>
+    <ol>
+      <li>Connectez votre compte Stripe à IO BILL (<em>Paiements → Stripe → Connecter</em>) ;</li>
+      <li>IO BILL réutilise automatiquement votre clé API Stripe existante ;</li>
+      <li>Activez l'option "Lien de paiement automatique sur chaque facture" ;</li>
+      <li>Les nouvelles factures émises depuis IO BILL contiendront un lien Stripe valide.</li>
+    </ol>
+    <p>Les Payment Links déjà émis depuis Pennylane restent valides côté Stripe. Vos clients peuvent continuer à payer leurs anciennes factures sans problème.</p>
+
+    <h2>7. Résilier Pennylane proprement</h2>
+    <p>Une fois IO BILL opérationnel et vérifié (émission d'au moins 2-3 factures de test), vous pouvez résilier Pennylane :</p>
+    <ul>
+      <li>La résiliation se fait depuis votre espace Pennylane, rubrique <em>Abonnement → Résilier</em> ;</li>
+      <li>Pennylane vous laisse 30 jours pour télécharger d'éventuels exports manquants ;</li>
+      <li><strong>Conservez l'archive ZIP complète</strong> de Pennylane sur votre disque dur — vous en aurez besoin en cas de contrôle fiscal sur les exercices traités dans Pennylane.</li>
+    </ul>
+
+    <h2>8. Et l'expert-comptable ?</h2>
+    <p>Si vous travaillez avec un expert-comptable, prévenez-le du changement. Il devra :</p>
+    <ul>
+      <li>Récupérer son accès à votre espace IO BILL (en mode Cabinet, accès gratuit pour l'expert) ;</li>
+      <li>Recevoir le FEC final Pennylane pour la dernière période ;</li>
+      <li>Réceptionner désormais les exports comptables depuis IO BILL.</li>
+    </ul>
+    <p>Aucun cabinet sérieux ne devrait s'opposer à un changement d'outil. Le format FEC est <strong>identique</strong> partout (norme DGFiP).</p>
+
+    <h2>Combien de temps cela prend-il vraiment ?</h2>
+    <p>Pour un freelance solo avec moins de 100 factures historiques : <strong>30 minutes</strong>. Pour une TPE avec plusieurs années d'historique et une banque connectée : <strong>1h30 à 2h</strong>, étalées sur 2-3 jours pour bien tester chaque étape. Notre support migration peut intervenir en visio si vous le souhaitez (gratuit sur demande à <a href="mailto:contact@iobill.online">contact@iobill.online</a>).</p>
+
+
+    <h2>Voir aussi</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/comparatif-logiciels-facturation">
+        <div class="related-card-label">Comparatif</div>
+        <div class="related-card-title">Pennylane vs IO BILL</div>
+        <div class="related-card-desc">Comparatif neutre et factuel de 6 acteurs du marché français.</div>
+      </a>
+      <a class="related-card" href="/tarifs">
+        <div class="related-card-label">Tarifs</div>
+        <div class="related-card-title">Tarifs IO BILL</div>
+        <div class="related-card-desc">Plans Solo, Pro, Cabinet — calcul personnalisé selon votre profil.</div>
+      </a>
+      <a class="related-card" href="/contact">
+        <div class="related-card-label">Contact</div>
+        <div class="related-card-title">Aide à la migration</div>
+        <div class="related-card-desc">Notre support peut vous accompagner en visio, gratuitement.</div>
+      </a>
+    </div>
+
+  </article>
+
+  <div class="cta-block">
+    <h3>Essayer IO BILL 14 jours, gratuitement</h3>
+    <p>Sans carte bancaire. Sans engagement. Résiliation en 1 clic.</p>
+    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=blog&utm_campaign=launch" class="btn btn-gold btn-lg" data-plausible-event-name="cta_blog_essayer">Créer mon compte →</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-col">
+    <a href="/" class="nav-logo" style="font-size:20px;">
+    IO <span>BILL</span>
+    </a>
+    <div class="copy" style="margin-top:12px;">La facturation française nouvelle génération.</div>
+    <div class="copy" style="margin-top:10px;">© 2026 OWL'S INDUSTRY · Made in France 🇫🇷</div>
+    <div class="copy">SAS au capital de 4 000 € · SIRET 852 788 470 00018 · TVA FR25852788470</div>
+  </div>
+  <div class="footer-col">
+    <strong>Produit</strong>
+    <a href="/fonctionnalites">Fonctionnalités</a>
+    <a href="/fonctionnalites/factur-x">Factur-X 2026</a>
+    <a href="/fonctionnalites/banque">Banque connectée</a>
+    <a href="/fonctionnalites/cabinet">Mode cabinet</a>
+    <a href="/fonctionnalites/mobile">App mobile</a>
+    <a href="/tarifs">Tarifs</a>
+    <a href="/comparatif-logiciels-facturation">Pourquoi IO BILL ?</a>
+    <a href="/changelog">Nouveautés</a>
+  </div>
+  <div class="footer-col">
+    <strong>Pour qui ?</strong>
+    <a href="/pour-qui/freelance">Freelances</a>
+    <a href="/pour-qui/tpe">TPE / PME</a>
+    <a href="/pour-qui/cabinet-comptable">Cabinets comptables</a>
+    <a href="/pour-qui/btp">BTP / artisans</a>
+    <a href="/blog">Blog</a>
+    <a href="/aide">Centre d'aide</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="footer-col">
+    <strong>Légal &amp; sécurité</strong>
+    <a href="/legal/cgu">CGU</a>
+    <a href="/legal/cgv">CGV</a>
+    <a href="/legal/confidentialite">Confidentialité (RGPD)</a>
+    <a href="/legal/mentions-legales">Mentions légales</a>
+    <a href="/legal/cookies">Cookies</a>
+    <a href="/legal/dpa">DPA (téléchargeable)</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Cadre OWL'S INDUSTRY -->
+  <rect width="100" height="100" rx="22" fill="#0c0b0f"/>
+  <rect x="1.5" y="1.5" width="97" height="97" rx="20.5" fill="none" stroke="#d4a843" stroke-width="2"/>
+  <!-- Logo IO : I + O fusionnés -->
+  <rect x="22" y="28" width="10" height="44" rx="1.5" fill="#d4a843"/>
+  <circle cx="62" cy="50" r="18" fill="none" stroke="#d4a843" stroke-width="10"/>
+  <!-- Trait de facture (signature IO BILL) -->
+  <rect x="40" y="76" width="38" height="3" rx="1" fill="#d4a843" opacity="0.55"/>
+</svg>

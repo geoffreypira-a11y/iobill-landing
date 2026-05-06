@@ -1,0 +1,21 @@
+{
+  "name": "iobill-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site vitrine iobill.online — IO BILL par OWL'S INDUSTRY",
+  "author": "OWL'S INDUSTRY",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site, no build step'",
+    "deploy": "vercel --prod",
+    "lint:html": "echo 'Add html-validate later if needed'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vercel": "^39.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

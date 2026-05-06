@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Changelog IO BILL — Toutes les nouveautés et mises à jour</title>
+<meta name="description" content="Suivez l'évolution d'IO BILL : nouvelles fonctionnalités, améliorations, corrections de bugs. Format Keep a Changelog. Mise à jour à chaque release."/>
+<meta name="keywords" content="changelog IO BILL, nouveautés IO BILL, mises à jour IO BILL, release notes IO BILL, versions IO BILL"/>
+<link rel="canonical" href="https://www.iobill.online/changelog"/>
+<link rel="alternate" hreflang="fr-FR" href="https://www.iobill.online/changelog"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<meta name="theme-color" content="#0c0b0f"/>
+<meta name="author" content="OWL'S INDUSTRY"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.iobill.online/changelog"/>
+<meta property="og:title" content="Changelog IO BILL"/>
+<meta property="og:description" content="Toutes les nouveautés et mises à jour d'IO BILL."/>
+<meta property="og:image" content="https://www.iobill.online/og-image.png"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:site_name" content="IO BILL"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Changelog IO BILL"/>
+<meta name="twitter:description" content="Toutes les nouveautés et mises à jour."/>
+<meta name="twitter:image" content="https://www.iobill.online/og-image.png"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles-seo.css"/>
+
+<script defer data-domain="iobill.online" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Changelog IO BILL",
+  "description": "Suivez l'évolution d'IO BILL : nouvelles fonctionnalités, améliorations, corrections de bugs.",
+  "url": "https://www.iobill.online/changelog",
+  "publisher": {"@type": "Organization", "name": "OWL'S INDUSTRY", "logo": {"@type": "ImageObject", "url": "https://www.iobill.online/favicon.svg"}},
+  "inLanguage": "fr-FR"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.iobill.online/"},
+    {"@type": "ListItem", "position": 2, "name": "Changelog", "item": "https://www.iobill.online/changelog"}
+  ]
+}
+</script>
+
+<style>
+.release {
+  position:relative; padding:0 0 32px 32px; margin-bottom:8px;
+  border-left:2px solid var(--border);
+}
+.release::before {
+  content:''; position:absolute; left:-7px; top:6px; width:12px; height:12px;
+  background:var(--gold); border-radius:50%;
+  box-shadow:0 0 0 4px var(--bg);
+}
+.release.latest::before {
+  background:var(--gold);
+  box-shadow:0 0 0 4px var(--bg), 0 0 16px var(--gold);
+}
+.release-header {
+  display:flex; align-items:center; gap:14px; margin-bottom:8px; flex-wrap:wrap;
+}
+.release-version {
+  font-family:'JetBrains Mono', monospace; font-size:14px; font-weight:700;
+  color:var(--gold); padding:4px 10px; border:1px solid var(--gold-dim);
+  border-radius:6px; background:rgba(212,168,67,0.08);
+}
+.release-date {
+  font-family:'Syne',sans-serif; font-size:12px; font-weight:600;
+  letter-spacing:1px; text-transform:uppercase; color:var(--text2);
+}
+.release-tag {
+  font-family:'Syne',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:1.5px; text-transform:uppercase;
+  padding:3px 8px; border-radius:6px;
+}
+.release-tag.major  { background:rgba(212,168,67,0.15); color:var(--gold); }
+.release-tag.minor  { background:rgba(74,158,255,0.15); color:var(--blue); }
+.release-tag.patch  { background:rgba(168,164,180,0.15); color:var(--text2); }
+.release-tag.beta   { background:rgba(229,92,92,0.15); color:var(--red); }
+.release h3 {
+  font-family:'Syne',sans-serif; font-size:18px; font-weight:700;
+  margin:8px 0 12px; color:var(--text);
+}
+.release-section { margin-top:14px; }
+.release-section-label {
+  font-family:'Syne',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:1.5px; text-transform:uppercase;
+  margin-bottom:6px;
+}
+.release-section.added .release-section-label    { color:var(--gold); }
+.release-section.changed .release-section-label  { color:var(--blue); }
+.release-section.fixed .release-section-label    { color:var(--text2); }
+.release-section.security .release-section-label { color:var(--red); }
+.release-section ul { margin:0 0 0 18px; font-size:14px; }
+.release-section li { color:var(--text2); margin-bottom:4px; }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+
+<nav class="site-nav" aria-label="Navigation principale">
+  <a href="/" class="nav-logo">
+    IO <span>BILL</span>
+  </a>
+  <div class="nav-links">
+    <a href="/fonctionnalites">Fonctionnalités</a>
+    <a href="/tarifs">Tarifs</a>
+    <a href="/pour-qui/freelance">Pour qui ?</a>
+    <a href="/blog">Blog</a>
+    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=nav&utm_campaign=launch" class="btn btn-ghost" style="padding:10px 22px;font-size:13px;">Connexion</a>
+    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=nav&utm_campaign=launch" class="btn btn-gold" style="padding:10px 22px;font-size:13px;" data-plausible-event-name="cta_top_nav">Essayer 14 jours</a>
+  </div>
+</nav>
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="/">Accueil</a><span>›</span><span style="color:var(--text);">Changelog</span>
+</nav>
+
+<main id="main" class="page">
+
+  <header class="page-header">
+    <div class="page-eyebrow">Changelog</div>
+    <h1>Le journal d'IO BILL.<br/><em>Tout ce qui change.</em></h1>
+    <p class="page-lead">Toutes les versions, fonctionnalités ajoutées, modifications, corrections et mises à jour de sécurité d'IO BILL. Mise à jour à chaque release. Suivant le format <a href="https://keepachangelog.com/fr/1.1.0/">Keep a Changelog</a>.</p>
+  </header>
+
+  <article>
+
+    <!-- v1.0.0 -->
+    <div class="release latest">
+      <div class="release-header">
+        <span class="release-version">v1.0.0</span>
+        <span class="release-date">5 mai 2026</span>
+        <span class="release-tag major">Lancement public</span>
+      </div>
+      <h3>🚀 Sortie officielle d'IO BILL 1.0</h3>
+      <p>Après 8 mois de développement et 3 mois de bêta privée avec 30 utilisateurs (freelances, TPE et 2 cabinets pilotes), IO BILL ouvre publiquement aujourd'hui. Le périmètre 1.0 couvre l'intégralité de ce qui était promis sur la landing : facturation Factur-X 2026/2027, banque connectée DSP2, OCR, mode cabinet 50 dossiers, app mobile native iOS &amp; Android.</p>
+
+      <div class="release-section added">
+        <div class="release-section-label">+ Ajouté</div>
+        <ul>
+          <li>Génération de factures Factur-X EN 16931 native (PDF/A-3 + XML CII embarqué)</li>
+          <li>Connexion bancaire DSP2 via Bridge by BPCE (250+ banques compatibles)</li>
+          <li>Auto-lettrage IA des écritures bancaires avec apprentissage continu</li>
+          <li>OCR achats Mistral (illimité plan Pro, 20/mois plan Solo)</li>
+          <li>Mode cabinet : console multi-dossiers (50 inclus), validation TVA, ticketing</li>
+          <li>Export FEC standardisé avec plans Cegid/Sage/ACD/Quadratus/Pennylane</li>
+          <li>Modules TVA (CA3, CA12, franchise) et URSSAF (micro, TNS, assimilé)</li>
+          <li>Apps mobiles natives iOS et Android (App Store et Google Play)</li>
+          <li>API REST publique documentée OpenAPI 3.0 avec webhooks</li>
+          <li>Intégrations Zapier et Make</li>
+          <li>3 plans tarifaires : Solo 9,90 € / Pro 19,90 € / Cabinet 49 € HT/mois</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- v0.9.5 -->
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">v0.9.5</span>
+        <span class="release-date">22 avril 2026</span>
+        <span class="release-tag beta">Bêta privée</span>
+      </div>
+      <h3>Stabilisation cabinet et FEC standardisé</h3>
+      <div class="release-section added">
+        <div class="release-section-label">+ Ajouté</div>
+        <ul>
+          <li>Plans comptables Cegid Loop, Sage 100c, ACD, Quadratus, Pennylane pour l'export FEC</li>
+          <li>Bascule de rôle cabinet ↔ client en un clic</li>
+          <li>SSO SAML 2.0 sur le plan Cabinet (en option, sans surcoût)</li>
+        </ul>
+      </div>
+      <div class="release-section changed">
+        <div class="release-section-label">~ Modifié</div>
+        <ul>
+          <li>Refonte de la console cabinet : KPI plus lisibles, alertes regroupées par échéance</li>
+          <li>Validation TVA cabinet : ajout d'un contrôle de cohérence sur les autoliquidations intracommunautaires</li>
+        </ul>
+      </div>
+      <div class="release-section fixed">
+        <div class="release-section-label">✓ Corrigé</div>
+        <ul>
+          <li>Bug d'affichage des montants TVA sur les factures avec multi-taux (5,5 % + 20 %)</li>
+          <li>Erreur d'import FEC pour les exercices décalés (ex. clôture au 30 juin)</li>
+          <li>Lenteur sur la console cabinet au-delà de 80 dossiers (pagination revue)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- v0.9.0 -->
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">v0.9.0</span>
+        <span class="release-date">5 mars 2026</span>
+        <span class="release-tag beta">Bêta privée</span>
+      </div>
+      <h3>Apps mobiles iOS et Android</h3>
+      <div class="release-section added">
+        <div class="release-section-label">+ Ajouté</div>
+        <ul>
+          <li>Publication des apps natives iOS et Android (Swift / Kotlin)</li>
+          <li>Scan d'achat depuis le mobile avec OCR Mistral en moins de 5 secondes</li>
+          <li>Authentification biométrique (Face ID, Touch ID, empreinte Android)</li>
+          <li>Mode hors-ligne : création de devis et factures, synchronisation à la reconnexion</li>
+          <li>Notifications push pour : facture payée, devis signé, écriture suspecte</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- v0.8.5 -->
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">v0.8.5</span>
+        <span class="release-date">15 février 2026</span>
+        <span class="release-tag beta">Bêta privée</span>
+      </div>
+      <h3>API publique et webhooks</h3>
+      <div class="release-section added">
+        <div class="release-section-label">+ Ajouté</div>
+        <ul>
+          <li>API REST documentée OpenAPI 3.0 (endpoints factures, devis, clients, paiements, banque)</li>
+          <li>Webhooks sortants pour 12 événements (facture émise, payée, devis signé, etc.)</li>
+          <li>Rate limiting : 60 req/min plan Pro, 300 req/min plan Cabinet</li>
+          <li>Documentation publique sur api.iobill.online/docs</li>
+          <li>SDK JavaScript/TypeScript et Python (open source MIT)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- v0.8.0 -->
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">v0.8.0</span>
+        <span class="release-date">28 janvier 2026</span>
+        <span class="release-tag beta">Bêta privée</span>
+      </div>
+      <h3>Banque connectée DSP2</h3>
+      <div class="release-section added">
+        <div class="release-section-label">+ Ajouté</div>
+        <ul>
+          <li>Connexion bancaire DSP2 via Bridge by BPCE</li>
+          <li>250+ banques compatibles (BNP, CA, SG, Qonto, Shine, Revolut, etc.)</li>
+          <li>Auto-lettrage IA basé sur 5 signaux (montant, libellé, donneur d'ordre, date, récurrence)</li>
+          <li>Réconciliation automatique des paiements Stripe (Payment Link)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- v0.7.0 -->
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">v0.7.0</span>
+        <span class="release-date">10 décembre 2025</span>
+        <span class="release-tag beta">Bêta privée</span>
+      </div>
+      <h3>Factur-X EN 16931 et PDP partenaire</h3>
+      <div class="release-section added">
+        <div class="release-section-label">+ Ajouté</div>
+        <ul>
+          <li>Génération native de factures au format Factur-X EN 16931 (PDF/A-3 + XML CII)</li>
+          <li>Profil BASIC WL en option pour les factures à 1 ligne</li>
+          <li>Profil EXTENDED disponible sur demande pour le BTP</li>
+          <li>Intégration de notre PDP partenaire Iopole (immatriculée DGFiP)</li>
+          <li>Boîte de réception PDP pour les factures fournisseurs structurées</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- v0.5.0 -->
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">v0.5.0</span>
+        <span class="release-date">1 octobre 2025</span>
+        <span class="release-tag beta">Bêta privée fermée</span>
+      </div>
+      <h3>Première bêta privée — facturation cœur</h3>
+      <div class="release-section added">
+        <div class="release-section-label">+ Ajouté</div>
+        <ul>
+          <li>Création de devis, factures, avoirs, factures d'acompte</li>
+          <li>CRM clients avec auto-fill SIRENE et VIES (TVA intracom)</li>
+          <li>Encaissement Stripe (Payment Link sur chaque facture)</li>
+          <li>Signature électronique Yousign sur les devis</li>
+          <li>Module URSSAF micro-entrepreneur (BIC, BNC, libéral CIPAV)</li>
+          <li>Module TVA franchise en base et réel simplifié (CA12)</li>
+          <li>Onboarding des 30 premiers bêta-testeurs</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Roadmap publique</h2>
+    <p>Les fonctionnalités prévues pour les prochaines versions, par ordre de priorité estimée :</p>
+    <ul>
+      <li><strong>v1.1</strong> (juin 2026) — Multi-devises (USD, GBP, CHF) avec taux de change BCE quotidien</li>
+      <li><strong>v1.2</strong> (Q3 2026) — Multi-établissements (holding + filiales) sous une connexion unique</li>
+      <li><strong>v1.3</strong> (Q3 2026) — Intégration n8n (alternative auto-hébergée à Zapier)</li>
+      <li><strong>v1.4</strong> (Q4 2026) — Module BTP avancé : situations de travaux multi-tranches, retenue de garantie, attestations URSSAF</li>
+      <li><strong>v2.0</strong> (Q1 2027) — Mode multi-utilisateurs avancé sur le plan Cabinet : permissions par dossier, audit log, archivage probant</li>
+    </ul>
+    <p>Ces dates sont indicatives. Pour suggérer une fonctionnalité ou voter pour celles qui vous intéressent, écrivez à <a href="mailto:roadmap@iobill.online">roadmap@iobill.online</a>.</p>
+
+    <h2>Notification des mises à jour</h2>
+    <p>Pour être notifié des nouvelles versions :</p>
+    <ul>
+      <li><strong>Dans l'application</strong> : un panneau "Quoi de neuf" s'affiche à chaque connexion après une release majeure ;</li>
+      <li><strong>Email</strong> : abonnez-vous à la newsletter sur <a href="/blog">le blog</a> (envoi à chaque release majeure ou mineure) ;</li>
+      <li><strong>RSS</strong> : flux disponible sur <code>/changelog/feed.xml</code> (à venir) ;</li>
+      <li><strong>Plausible custom event</strong> : pour les développeurs qui suivent l'API, chaque release est annoncée via un webhook public.</li>
+    </ul>
+
+  </article>
+
+  <div class="cta-block">
+    <h3>Prêt à essayer la dernière version ?</h3>
+    <p>14 jours d'essai gratuit, sans carte bancaire.</p>
+    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=changelog&utm_campaign=launch" class="btn btn-gold btn-lg" data-plausible-event-name="cta_changelog_essayer">Créer mon compte gratuit →</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-col">
+    <a href="/" class="nav-logo" style="font-size:20px;">
+    IO <span>BILL</span>
+    </a>
+    <div class="copy" style="margin-top:12px;">La facturation française nouvelle génération.</div>
+    <div class="copy" style="margin-top:10px;">© 2026 OWL'S INDUSTRY · Made in France 🇫🇷</div>
+    <div class="copy">SAS au capital de 4 000 € · SIRET 852 788 470 00018 · TVA FR25852788470</div>
+  </div>
+  <div class="footer-col">
+    <strong>Produit</strong>
+    <a href="/fonctionnalites">Fonctionnalités</a>
+    <a href="/fonctionnalites/factur-x">Factur-X 2026</a>
+    <a href="/fonctionnalites/banque">Banque connectée</a>
+    <a href="/fonctionnalites/cabinet">Mode cabinet</a>
+    <a href="/fonctionnalites/mobile">App mobile</a>
+    <a href="/tarifs">Tarifs</a>
+    <a href="/comparatif-logiciels-facturation">Pourquoi IO BILL ?</a>
+    <a href="/changelog">Nouveautés</a>
+  </div>
+  <div class="footer-col">
+    <strong>Pour qui ?</strong>
+    <a href="/pour-qui/freelance">Freelances</a>
+    <a href="/pour-qui/tpe">TPE / PME</a>
+    <a href="/pour-qui/cabinet-comptable">Cabinets comptables</a>
+    <a href="/pour-qui/btp">BTP / artisans</a>
+    <a href="/blog">Blog</a>
+    <a href="/aide">Centre d'aide</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="footer-col">
+    <strong>Légal &amp; sécurité</strong>
+    <a href="/legal/cgu">CGU</a>
+    <a href="/legal/cgv">CGV</a>
+    <a href="/legal/confidentialite">Confidentialité (RGPD)</a>
+    <a href="/legal/mentions-legales">Mentions légales</a>
+    <a href="/legal/cookies">Cookies</a>
+    <a href="/legal/dpa">DPA (téléchargeable)</a>
+  </div>
+</footer>
+
+</body>
+</html>

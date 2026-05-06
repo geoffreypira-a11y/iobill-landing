@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tarifs IO BILL — Solo 9,90€, Pro 19,90€, Cabinet 49€ HT/mois | Sans engagement</title>
+<meta name="description" content="Tarifs IO BILL : 3 plans transparents et sans engagement. Solo 9,90€/mois, Pro 19,90€/mois, Cabinet 49€/mois. 14 jours gratuits sans CB. Add-ons : signature électronique, SMS de relance, transmission e-invoicing PDP."/>
+<link rel="canonical" href="https://www.iobill.online/tarifs"/>
+<link rel="alternate" hreflang="fr-FR" href="https://www.iobill.online/tarifs"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<meta name="theme-color" content="#0c0b0f"/>
+<meta name="author" content="OWL'S INDUSTRY"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.iobill.online/tarifs"/>
+<meta property="og:title" content="Tarifs IO BILL — Solo / Pro / Cabinet, sans engagement"/>
+<meta property="og:description" content="3 plans transparents : Solo 9,90€, Pro 19,90€, Cabinet 49€ HT/mois. 14 jours gratuits sans CB. Calculateur interactif inclus."/>
+<meta property="og:image" content="https://www.iobill.online/og-image.png"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:site_name" content="IO BILL"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Tarifs IO BILL — sans engagement"/>
+<meta name="twitter:description" content="Solo 9,90€, Pro 19,90€, Cabinet 49€ HT/mois. 14 jours gratuits sans CB."/>
+<meta name="twitter:image" content="https://www.iobill.online/og-image.png"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles-seo.css"/>
+
+<script defer data-domain="iobill.online" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Puis-je changer de plan IO BILL en cours de route ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, à tout moment depuis votre espace. La bascule Solo → Pro est immédiate avec une facture proratisée. La bascule Pro → Cabinet est manuelle (nous contacter) car elle change le périmètre de l'abonnement (multi-dossiers)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Y a-t-il des frais cachés sur IO BILL ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Les seuls coûts en plus du forfait sont les add-ons explicitement choisis : signature électronique Yousign à 5 €/mois (ou 1 €/signature à l'unité), SMS de relance à 0,10 € par SMS, et la transmission e-invoicing via PDP qui est incluse à partir du plan Pro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que se passe-t-il si je dépasse les limites de mon plan ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les factures et devis sont illimités sur tous les plans. Les seules limites sont le nombre d'utilisateurs (1 en Solo, 5 en Pro, illimité en Cabinet) et le nombre de dossiers clients en mode cabinet (50 inclus, +1 € HT/mois par dossier supplémentaire au-delà)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "La TVA est-elle incluse dans les prix affichés ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Tous les prix sont affichés en HT. La TVA française à 20 % s'applique en sus pour les clients français assujettis. Les clients européens hors France assujettis à la TVA bénéficient de l'autoliquidation (mention obligatoire sur la facture)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels moyens de paiement IO BILL accepte ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Carte bancaire (Visa, Mastercard, AmEx) et prélèvement SEPA via Stripe. Pour les abonnements annuels, possibilité de paiement par virement sur facture (nous contacter)."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.iobill.online/"},
+    {"@type": "ListItem", "position": 2, "name": "Tarifs", "item": "https://www.iobill.online/tarifs"}
+  ]
+}
+</script>
+
+<style>
+/* Toggle mensuel/annuel */
+.billing-toggle {
+  display:inline-flex; padding:6px; background:var(--bg2); border:1px solid var(--border);
+  border-radius:100px; margin:8px auto 40px;
+}
+.billing-toggle button {
+  padding:10px 22px; border:none; background:transparent; color:var(--text2);
+  font-family:'DM Sans', sans-serif; font-size:13px; font-weight:600;
+  border-radius:100px; cursor:pointer; transition:all 0.25s;
+}
+.billing-toggle button.active {
+  background:linear-gradient(135deg,var(--gold),var(--gold2)); color:#000;
+}
+.billing-save { display:inline-block; margin-left:6px; padding:2px 8px; border-radius:6px;
+  background:rgba(212,168,67,0.15); color:var(--gold); font-size:10px; font-weight:700; letter-spacing:1px; }
+
+/* Pricing cards */
+.pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:start; max-width:1100px; margin:0 auto; }
+.price-card {
+  background:var(--bg2); border:1px solid var(--border); border-radius:16px;
+  padding:36px 32px; position:relative; transition:all 0.4s;
+}
+.price-card:hover { border-color:var(--gold-dim); }
+.price-card.featured {
+  border-color:var(--gold); background:linear-gradient(180deg,rgba(212,168,67,0.06),var(--bg2));
+  transform:scale(1.04);
+}
+.price-card.featured::before {
+  content:'POPULAIRE'; position:absolute; top:-12px; left:50%; transform:translateX(-50%);
+  padding:4px 16px; border-radius:100px; font-size:10px; font-weight:700;
+  letter-spacing:2px; background:var(--gold); color:var(--bg);
+}
+.price-name { font-family:'Syne',sans-serif; font-size:20px; font-weight:700; margin-bottom:8px; color:var(--text); }
+.price-tag { display:inline-block; padding:3px 10px; border-radius:6px;
+  background:var(--bg3); border:1px solid var(--border);
+  font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--text2); margin-bottom:14px; }
+.price-val { font-family:'Syne',sans-serif; font-size:48px; font-weight:800; color:var(--gold); line-height:1; }
+.price-val small { font-size:16px; color:var(--text2); font-weight:500; }
+.price-yearly { font-size:13px; color:var(--text2); margin-top:6px; min-height:18px; }
+.price-yearly strong { color:var(--gold); }
+.price-desc { font-size:13px; color:var(--muted); margin:18px 0 24px; line-height:1.7; }
+.price-features { list-style:none; margin-bottom:28px; padding-left:0; }
+.price-features li {
+  padding:8px 0; font-size:13px; color:var(--text2); border-bottom:1px solid var(--border);
+  display:flex; align-items:flex-start; gap:10px;
+}
+.price-features li::before { content:'✓'; color:var(--gold); font-weight:700; font-size:14px; flex-shrink:0; }
+.price-features li.disabled { color:var(--muted); text-decoration:line-through; }
+.price-features li.disabled::before { content:'—'; color:var(--muted); }
+.price-features li.starred::before { content:'★'; color:var(--gold); }
+
+/* Add-ons */
+.addon-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; margin-top:24px; }
+.addon-card {
+  background:var(--bg2); border:1px solid var(--border); border-radius:12px;
+  padding:22px;
+}
+.addon-title { font-family:'Syne',sans-serif; font-size:15px; font-weight:700; color:var(--text); margin-bottom:6px; }
+.addon-price { color:var(--gold); font-weight:700; font-family:'JetBrains Mono', monospace; font-size:14px; }
+.addon-desc { font-size:13px; color:var(--text2); margin-top:8px; line-height:1.6; }
+
+/* Calculateur */
+.calc-box {
+  background:var(--bg2); border:1px solid var(--border); border-radius:16px;
+  padding:32px; max-width:760px; margin:0 auto;
+}
+.calc-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:24px; }
+.calc-grid label { display:block; font-family:'Syne',sans-serif; font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+.calc-grid input, .calc-grid select {
+  width:100%; padding:12px 14px; background:var(--bg3); border:1px solid var(--border);
+  border-radius:10px; color:var(--text); font-family:'DM Sans', sans-serif; font-size:15px;
+}
+.calc-grid input:focus, .calc-grid select:focus { outline:none; border-color:var(--gold); }
+.calc-result {
+  background:var(--bg3); border:1px solid var(--gold-dim); border-radius:12px;
+  padding:24px; text-align:center;
+}
+.calc-recom { font-family:'Syne',sans-serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+.calc-amount { font-family:'Syne',sans-serif; font-size:36px; font-weight:800; color:var(--text); }
+.calc-amount small { font-size:14px; color:var(--text2); font-weight:500; }
+.calc-detail { font-size:13px; color:var(--text2); margin-top:8px; }
+
+/* FAQ block */
+.faq-list { display:flex; flex-direction:column; gap:12px; margin-top:24px; }
+.faq-item {
+  background:var(--bg2); border:1px solid var(--border); border-radius:12px;
+  overflow:hidden; transition:border-color 0.3s;
+}
+.faq-item:hover { border-color:var(--gold-dim); }
+.faq-item[open] { border-color:rgba(212,168,67,0.35); }
+.faq-item summary {
+  padding:18px 24px; cursor:pointer; font-size:15px; font-weight:600; color:var(--text);
+  list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after { content:'+'; font-size:22px; color:var(--gold); transition:transform 0.3s; }
+.faq-item[open] summary::after { transform:rotate(45deg); }
+.faq-answer { padding:0 24px 20px; font-size:14px; color:var(--text2); line-height:1.75; }
+.faq-answer a { color:var(--gold); }
+
+@media (max-width:780px) {
+  .pricing-grid { grid-template-columns:1fr; }
+  .price-card.featured { transform:none; }
+  .calc-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+
+<nav class="site-nav" aria-label="Navigation principale">
+  <a href="/" class="nav-logo">
+    IO <span>BILL</span>
+  </a>
+  <div class="nav-links">
+    <a href="/fonctionnalites">Fonctionnalités</a>
+    <a href="/tarifs" style="color:var(--gold);">Tarifs</a>
+    <a href="/pour-qui/freelance">Pour qui ?</a>
+    <a href="/blog">Blog</a>
+    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=nav&utm_campaign=launch" class="btn btn-ghost" style="padding:10px 22px;font-size:13px;">Connexion</a>
+    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=nav&utm_campaign=launch" class="btn btn-gold" style="padding:10px 22px;font-size:13px;" data-plausible-event-name="cta_top_nav">Essayer 14 jours</a>
+  </div>
+</nav>
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="/">Accueil</a><span>›</span><span style="color:var(--text);">Tarifs</span>
+</nav>
+
+<main id="main" class="page" style="max-width:1180px;">
+
+<header class="page-header">
+  <div class="page-eyebrow">Tarifs</div>
+  <h1>Simple. Transparent.<br/><em>Sans engagement.</em></h1>
+  <p class="page-lead">Trois plans pensés pour trois profils. Pas de frais cachés, pas de surprise. 14 jours d'essai gratuit, sans carte bancaire demandée.</p>
+</header>
+
+<!-- Toggle billing period -->
+<div style="text-align:center;">
+  <div class="billing-toggle" role="tablist" aria-label="Période de facturation">
+    <button id="bill-monthly" class="active" role="tab" aria-selected="true">Mensuel</button>
+    <button id="bill-yearly" role="tab" aria-selected="false">Annuel <span class="billing-save">-20%</span></button>
+  </div>
+</div>
+
+<!-- 3 PLANS -->
+<div class="pricing-grid">
+
+  <!-- SOLO -->
+  <div class="price-card" data-plan="solo">
+    <div class="price-name">Solo</div>
+    <div class="price-tag">Freelance / Auto-entrepreneur</div>
+    <div class="price-val"><span class="amount" data-monthly="9,90" data-yearly="7,42">9,90</span>€ <small>HT /mois</small></div>
+    <div class="price-yearly" data-monthly="" data-yearly="<strong>89 € HT/an</strong> — soit 2 mois offerts">&nbsp;</div>
+    <div class="price-desc">1 utilisateur. Idéal freelance, auto-entrepreneur, micro-entrepreneur. Toutes les fonctions cœur incluses.</div>
+    <ul class="price-features">
+      <li>Factures &amp; devis illimités</li>
+      <li>Avoirs illimités</li>
+      <li class="starred">Factur-X 2026/2027 inclus</li>
+      <li>CRM clients (auto-fill SIRENE + VIES)</li>
+      <li>Encaissement Stripe (Payment Link)</li>
+      <li>App mobile iOS &amp; Android</li>
+      <li>Export FEC pour expert-comptable</li>
+      <li>URSSAF micro auto-calculée</li>
+      <li>Hébergement EU + sauvegarde quotidienne</li>
+      <li class="disabled">Banque connectée DSP2</li>
+      <li class="disabled">OCR achats Mistral</li>
+      <li class="disabled">Multi-utilisateurs</li>
+      <li class="disabled">Mode cabinet</li>
+    </ul>
+    <a href="https://app.iobill.online/?plan=solo&utm_source=site_vitrine&utm_medium=tarifs&utm_campaign=launch" class="btn btn-ghost" style="width:100%; justify-content:center;">Démarrer en Solo</a>
+  </div>
+
+  <!-- PRO -->
+  <div class="price-card featured" data-plan="pro">
+    <div class="price-name">Pro</div>
+    <div class="price-tag">TPE / PME jusqu'à 5 personnes</div>
+    <div class="price-val"><span class="amount" data-monthly="19,90" data-yearly="16,58">19,90</span>€ <small>HT /mois</small></div>
+    <div class="price-yearly" data-monthly="" data-yearly="<strong>199 € HT/an</strong> — soit 2 mois offerts">&nbsp;</div>
+    <div class="price-desc">Jusqu'à 5 utilisateurs avec rôles. Tous les modules avancés inclus. Le meilleur rapport fonctionnalités/prix.</div>
+    <ul class="price-features">
+      <li>Tout le plan Solo</li>
+      <li>Jusqu'à 5 utilisateurs avec rôles</li>
+      <li class="starred">Banque connectée DSP2 (Bridge by BPCE)</li>
+      <li class="starred">Auto-lettrage IA</li>
+      <li class="starred">OCR achats Mistral (illimité)</li>
+      <li>Module TVA complet (CA3 / CA12)</li>
+      <li>Multi-devises &amp; multi-régimes TVA</li>
+      <li>API REST publique</li>
+      <li>Webhooks &amp; intégrations Zapier</li>
+      <li>Support prioritaire 24h ouvrées</li>
+      <li class="disabled">Mode cabinet (multi-dossiers)</li>
+    </ul>
+    <a href="https://app.iobill.online/?plan=pro&utm_source=site_vitrine&utm_medium=tarifs&utm_campaign=launch" class="btn btn-gold" style="width:100%; justify-content:center;" data-plausible-event-name="cta_pricing_pro">Démarrer en Pro →</a>
+  </div>
+
+  <!-- CABINET -->
+  <div class="price-card" data-plan="cabinet">
+    <div class="price-name">Cabinet</div>
+    <div class="price-tag">Expert-comptable</div>
+    <div class="price-val"><span class="amount" data-monthly="49" data-yearly="40,83">49</span>€ <small>HT /mois</small></div>
+    <div class="price-yearly" data-monthly="" data-yearly="<strong>490 € HT/an</strong> — soit 2 mois offerts">&nbsp;</div>
+    <div class="price-desc">Pour cabinets d'expertise comptable. 50 dossiers clients supervisés inclus. Tarif dégressif au-delà.</div>
+    <ul class="price-features">
+      <li>Tout le plan Pro</li>
+      <li class="starred">Jusqu'à 50 clients supervisés</li>
+      <li>Console multi-dossiers</li>
+      <li>Revue collaborative des écritures</li>
+      <li>Validation TVA cabinet</li>
+      <li>Ticketing client intégré</li>
+      <li>Export FEC standardisé par client</li>
+      <li>Compatible Cegid, Sage, ACD, Quadratus</li>
+      <li>Tarif dégressif >50 clients (1€/dossier suppl.)</li>
+      <li>Onboarding cabinet dédié</li>
+      <li>Support prioritaire 4h ouvrées</li>
+    </ul>
+    <a href="https://app.iobill.online/?plan=cabinet&utm_source=site_vitrine&utm_medium=tarifs&utm_campaign=launch" class="btn btn-ghost" style="width:100%; justify-content:center;">Démarrer en Cabinet</a>
+  </div>
+
+</div>
+
+<div style="text-align:center; margin-top:24px; font-size:12px; color:var(--muted);">
+  Tous les prix sont en HT, hors TVA française à 20 %. Aucun engagement sur le forfait mensuel. Le forfait annuel implique un engagement 12 mois en contrepartie des 2 mois offerts.
+</div>
+
+<!-- ADD-ONS -->
+<h2 style="margin-top:80px;">Add-ons à la carte</h2>
+<p>Activables en un clic depuis votre espace, désactivables aussi vite. Pas d'add-on imposé.</p>
+<div class="addon-grid">
+  <div class="addon-card">
+    <div class="addon-title">Signature électronique Yousign</div>
+    <div class="addon-price">+5 € HT/mois <span style="color:var(--text2); font-weight:500;">ou 1 €/signature à l'unité</span></div>
+    <div class="addon-desc">Faites signer vos devis en 30 secondes par vos clients. Valeur juridique eIDAS. Inclus dans certaines promotions de lancement.</div>
+  </div>
+  <div class="addon-card">
+    <div class="addon-title">SMS de relance automatique</div>
+    <div class="addon-price">0,10 € HT par SMS</div>
+    <div class="addon-desc">Pour les factures impayées : SMS de relance automatique J+15 / J+30 / J+45 avec lien de paiement Stripe.</div>
+  </div>
+  <div class="addon-card">
+    <div class="addon-title">Transmission e-invoicing PDP</div>
+    <div class="addon-price">Inclus à partir du plan Pro</div>
+    <div class="addon-desc">Envoi de vos factures B2B au format Factur-X via une PDP partenaire (Iopole). Conforme calendrier 2027.</div>
+  </div>
+  <div class="addon-card">
+    <div class="addon-title">Importation cabinet (migration)</div>
+    <div class="addon-price">Gratuit (forfait annuel)</div>
+    <div class="addon-desc">Migration assistée depuis Pennylane, Indy, Tiime, Freebe, QuickBooks ou Sage. Offert pour tout abonnement annuel.</div>
+  </div>
+</div>
+
+<!-- CALCULATEUR -->
+<h2 style="margin-top:80px;">Combien IO BILL me coûtera ?</h2>
+<p>Estimation rapide selon votre profil. La recommandation s'ajuste en temps réel.</p>
+
+<div class="calc-box">
+  <div class="calc-grid">
+    <div>
+      <label for="calc-users">Nombre d'utilisateurs</label>
+      <input id="calc-users" type="number" min="1" max="200" value="1"/>
+    </div>
+    <div>
+      <label for="calc-volume">Factures / mois</label>
+      <input id="calc-volume" type="number" min="0" max="2000" value="20"/>
+    </div>
+    <div>
+      <label for="calc-profile">Profil</label>
+      <select id="calc-profile">
+        <option value="freelance">Freelance / auto-entrepreneur</option>
+        <option value="tpe">TPE / PME</option>
+        <option value="cabinet">Cabinet expert-comptable</option>
+      </select>
+    </div>
+    <div>
+      <label for="calc-period">Période</label>
+      <select id="calc-period">
+        <option value="monthly">Mensuelle</option>
+        <option value="yearly">Annuelle (-20%)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-result">
+    <div class="calc-recom" id="calc-recom">Plan recommandé : Solo</div>
+    <div class="calc-amount"><span id="calc-amount">9,90</span>€ <small>HT/mois</small></div>
+    <div class="calc-detail" id="calc-detail">Forfait mensuel sans engagement, résiliable en 1 clic.</div>
+  </div>
+  <div style="text-align:center; margin-top:20px;">
+    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=tarifs_calc&utm_campaign=launch" class="btn btn-gold" data-plausible-event-name="cta_calc_essayer">Essayer ce plan 14 jours →</a>
+  </div>
+</div>
+
+<!-- COMPARATIF DETAILLE -->
+<h2 style="margin-top:80px;">Comparatif détaillé vs concurrents</h2>
+<p>Tarifs constatés en mai 2026 sur les sites officiels. Les fonctionnalités et prix peuvent évoluer.</p>
+
+<table class="cmp-table">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>IO BILL</th>
+      <th>Pennylane</th>
+      <th>Tiime</th>
+      <th>Indy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Plan d'entrée mensuel</strong></td>
+      <td class="highlight">9,90 € HT</td>
+      <td>29 € HT</td>
+      <td>14,90 € HT</td>
+      <td>20 € HT</td>
+    </tr>
+    <tr>
+      <td>Plan TPE jusqu'à 5 utilisateurs</td>
+      <td class="highlight">19,90 € HT</td>
+      <td>49 € HT</td>
+      <td>34,90 € HT</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Factur-X 2026/2027 (PDP incluse)</td>
+      <td class="ok">Inclus</td>
+      <td class="no">Add-on +30€/mois</td>
+      <td class="no">Add-on</td>
+      <td class="no">Add-on</td>
+    </tr>
+    <tr>
+      <td>OCR achats illimité</td>
+      <td class="ok">Inclus en Pro</td>
+      <td class="ok">Inclus</td>
+      <td class="ok">Inclus</td>
+      <td class="no">Limité</td>
+    </tr>
+    <tr>
+      <td>Banque connectée DSP2</td>
+      <td class="ok">Inclus en Pro</td>
+      <td class="ok">Inclus</td>
+      <td class="ok">Inclus</td>
+      <td class="ok">Inclus</td>
+    </tr>
+    <tr>
+      <td>Mode cabinet expert-comptable</td>
+      <td class="highlight">49 € HT/mois (50 clients)</td>
+      <td>Sur devis</td>
+      <td>49 € HT/mois</td>
+      <td class="no">Non</td>
+    </tr>
+    <tr>
+      <td>Engagement</td>
+      <td class="ok">Aucun (mensuel)</td>
+      <td class="ok">Aucun</td>
+      <td class="ok">Aucun</td>
+      <td class="ok">Aucun</td>
+    </tr>
+    <tr>
+      <td>Hébergement</td>
+      <td class="ok">UE (Francfort)</td>
+      <td class="ok">UE</td>
+      <td class="ok">UE</td>
+      <td class="ok">UE</td>
+    </tr>
+    <tr>
+      <td>App mobile native</td>
+      <td class="ok">iOS + Android</td>
+      <td>Limitée</td>
+      <td class="ok">iOS + Android</td>
+      <td class="ok">iOS + Android</td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="text-align:center; font-size:13px; color:var(--muted); margin-top:-8px;">
+  Pour un panorama plus large incluant Freebe, Henrri, Abby et les solutions cabinet : <a href="/comparatif-logiciels-facturation" style="color:var(--gold);">voir le comparatif éditorial du marché français →</a>
+</p>
+
+<!-- FAQ TARIFS -->
+<h2 style="margin-top:80px;">Questions fréquentes sur les tarifs</h2>
+
+<div class="faq-list">
+
+  <details class="faq-item">
+    <summary>Puis-je changer de plan en cours de route ?</summary>
+    <div class="faq-answer">
+      Oui, à tout moment depuis votre espace. La bascule <strong>Solo → Pro</strong> est immédiate avec une facture proratisée pour les jours restants. La bascule <strong>Pro → Cabinet</strong> est manuelle (nous contacter) car elle change le périmètre de l'abonnement (passage en multi-dossiers).<br/><br/>
+      Le passage <strong>annuel → mensuel</strong> n'est possible qu'à l'échéance du contrat annuel.
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Y a-t-il des frais cachés ?</summary>
+    <div class="faq-answer">
+      Non. Les seuls coûts en plus du forfait sont les <strong>add-ons explicitement choisis</strong> :
+      <ul>
+        <li>Signature électronique Yousign : 5 €/mois ou 1 €/signature ;</li>
+        <li>SMS de relance : 0,10 €/SMS (uniquement si vous activez les relances SMS) ;</li>
+        <li>Transmission e-invoicing PDP : inclus à partir du plan Pro.</li>
+      </ul>
+      Pas de frais d'installation, pas de frais de migration (si annuel), pas de surcoût pour les évolutions et mises à jour, pas de frais cachés sur le support.
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Que se passe-t-il si je dépasse les limites de mon plan ?</summary>
+    <div class="faq-answer">
+      Les <strong>factures et devis sont illimités</strong> sur tous les plans. Les seules limites sont :
+      <ul>
+        <li><strong>Utilisateurs</strong> : 1 en Solo, 5 en Pro, illimité en Cabinet ;</li>
+        <li><strong>Dossiers clients en mode Cabinet</strong> : 50 inclus, +1 € HT/mois par dossier supplémentaire au-delà.</li>
+      </ul>
+      Si vous dépassez la limite d'utilisateurs, IO BILL vous propose la bascule vers le plan supérieur (sans changer la facturation tant que vous ne validez pas).
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>La TVA est-elle incluse dans les prix affichés ?</summary>
+    <div class="faq-answer">
+      Non. Tous les prix sont affichés en <strong>HT</strong> (hors taxes). La TVA française à 20 % s'applique en sus pour les clients français assujettis. Les <strong>clients européens hors France</strong> assujettis à la TVA bénéficient de l'autoliquidation (facturation HT, mention obligatoire portée sur la facture). Les particuliers français paient le prix TTC.
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Quels moyens de paiement sont acceptés ?</summary>
+    <div class="faq-answer">
+      <strong>Carte bancaire</strong> (Visa, Mastercard, American Express) et <strong>prélèvement SEPA</strong> via Stripe (sécurisé PCI DSS niveau 1). Pour les abonnements annuels, possibilité de paiement par <strong>virement sur facture</strong> (nous contacter).
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Puis-je tester IO BILL gratuitement avant de m'abonner ?</summary>
+    <div class="faq-answer">
+      Oui. <strong>14 jours d'essai gratuit</strong>, sans carte bancaire demandée. Toutes les fonctionnalités du plan Pro sont accessibles pendant l'essai. À la fin, vous choisissez votre plan ou votre compte passe en lecture seule (60 jours pour exporter, puis suppression).
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Comment résilier ?</summary>
+    <div class="faq-answer">
+      <strong>Forfait mensuel</strong> : un clic depuis l'écran "Abonnement" de votre espace, effective en fin de période en cours. Vos données restent exportables 30 jours après résiliation.<br/><br/>
+      <strong>Forfait annuel</strong> : la résiliation prend effet à l'échéance des 12 mois (pas de remboursement anticipé, c'est la contrepartie des 2 mois offerts).
+    </div>
+  </details>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-block">
+  <h3>Prêt à essayer ?</h3>
+  <p>14 jours sans CB, sans engagement. Vos factures conformes 2026 dès la première utilisation.</p>
+  <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=tarifs_cta&utm_campaign=launch" class="btn btn-gold btn-lg" data-plausible-event-name="cta_tarifs_final">Créer mon compte gratuit →</a>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-col">
+    <a href="/" class="nav-logo" style="font-size:20px;">
+    IO <span>BILL</span>
+    </a>
+    <div class="copy" style="margin-top:12px;">La facturation française nouvelle génération.</div>
+    <div class="copy" style="margin-top:10px;">© 2026 OWL'S INDUSTRY · Made in France 🇫🇷</div>
+    <div class="copy">SAS au capital de 4 000 € · SIRET 852 788 470 00018 · TVA FR25852788470</div>
+  </div>
+  <div class="footer-col">
+    <strong>Produit</strong>
+    <a href="/fonctionnalites">Fonctionnalités</a>
+    <a href="/fonctionnalites/factur-x">Factur-X 2026</a>
+    <a href="/fonctionnalites/banque">Banque connectée</a>
+    <a href="/fonctionnalites/cabinet">Mode cabinet</a>
+    <a href="/fonctionnalites/mobile">App mobile</a>
+    <a href="/tarifs">Tarifs</a>
+    <a href="/comparatif-logiciels-facturation">Pourquoi IO BILL ?</a>
+    <a href="/changelog">Nouveautés</a>
+  </div>
+  <div class="footer-col">
+    <strong>Pour qui ?</strong>
+    <a href="/pour-qui/freelance">Freelances</a>
+    <a href="/pour-qui/tpe">TPE / PME</a>
+    <a href="/pour-qui/cabinet-comptable">Cabinets comptables</a>
+    <a href="/pour-qui/btp">BTP / artisans</a>
+    <a href="/blog">Blog</a>
+    <a href="/aide">Centre d'aide</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="footer-col">
+    <strong>Légal &amp; sécurité</strong>
+    <a href="/legal/cgu">CGU</a>
+    <a href="/legal/cgv">CGV</a>
+    <a href="/legal/confidentialite">Confidentialité (RGPD)</a>
+    <a href="/legal/mentions-legales">Mentions légales</a>
+    <a href="/legal/cookies">Cookies</a>
+    <a href="/legal/dpa">DPA (téléchargeable)</a>
+  </div>
+</footer>
+
+<script>
+// =========================================================
+// TARIFS — toggle mensuel/annuel + calculateur
+// =========================================================
+
+(function() {
+  const btnMonthly = document.getElementById('bill-monthly');
+  const btnYearly  = document.getElementById('bill-yearly');
+  const cards      = document.querySelectorAll('.price-card');
+
+  function setBilling(period) {
+    const monthly = period === 'monthly';
+    btnMonthly.classList.toggle('active', monthly);
+    btnYearly.classList.toggle('active', !monthly);
+    btnMonthly.setAttribute('aria-selected', monthly);
+    btnYearly.setAttribute('aria-selected', !monthly);
+
+    cards.forEach(card => {
+      const amountEl  = card.querySelector('.amount');
+      const yearlyEl  = card.querySelector('.price-yearly');
+      if (amountEl) amountEl.textContent = monthly ? amountEl.dataset.monthly : amountEl.dataset.yearly;
+      if (yearlyEl) yearlyEl.innerHTML = monthly ? yearlyEl.dataset.monthly : yearlyEl.dataset.yearly;
+    });
+
+    // Sync avec le calculateur
+    const periodSelect = document.getElementById('calc-period');
+    if (periodSelect) { periodSelect.value = period === 'monthly' ? 'monthly' : 'yearly'; recompute(); }
+  }
+
+  btnMonthly.addEventListener('click', () => setBilling('monthly'));
+  btnYearly.addEventListener('click',  () => setBilling('yearly'));
+
+  // =========================================================
+  // CALCULATEUR
+  // =========================================================
+  const usersInput   = document.getElementById('calc-users');
+  const volumeInput  = document.getElementById('calc-volume');
+  const profileInput = document.getElementById('calc-profile');
+  const periodInput  = document.getElementById('calc-period');
+  const recomEl      = document.getElementById('calc-recom');
+  const amountEl     = document.getElementById('calc-amount');
+  const detailEl     = document.getElementById('calc-detail');
+
+  const PRICES = {
+    solo:    { monthly: 9.90, yearly: 7.42 },   // yearly = 89/12 ~ 7.42
+    pro:     { monthly: 19.90, yearly: 16.58 }, // yearly = 199/12 ~ 16.58
+    cabinet: { monthly: 49,    yearly: 40.83 }  // yearly = 490/12 ~ 40.83
+  };
+
+  function recommend() {
+    const users   = parseInt(usersInput.value, 10) || 1;
+    const profile = profileInput.value;
+    if (profile === 'cabinet') return 'cabinet';
+    if (users >= 2 || profile === 'tpe') return 'pro';
+    return 'solo';
+  }
+
+  function recompute() {
+    const plan   = recommend();
+    const period = periodInput.value;
+    const price  = PRICES[plan][period];
+    const planName = plan.charAt(0).toUpperCase() + plan.slice(1);
+
+    recomEl.textContent = `Plan recommandé : ${planName}`;
+    amountEl.textContent = price.toFixed(2).replace('.', ',');
+
+    if (period === 'yearly') {
+      const annual = (price * 12).toFixed(0);
+      detailEl.innerHTML = `Soit <strong>${annual} € HT/an</strong>, équivalent à 2 mois offerts. Engagement 12 mois.`;
+    } else {
+      detailEl.innerHTML = `Forfait mensuel sans engagement, résiliable en 1 clic.`;
+    }
+
+    // Highlight plan card
+    cards.forEach(card => {
+      card.style.outline = (card.dataset.plan === plan) ? '2px solid var(--gold)' : 'none';
+      card.style.outlineOffset = '4px';
+    });
+  }
+
+  [usersInput, volumeInput, profileInput, periodInput].forEach(el => el && el.addEventListener('input', recompute));
+
+  // Init
+  setBilling('monthly');
+  recompute();
+})();
+</script>
+
+</body>
+</html>

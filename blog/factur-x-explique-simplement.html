@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Factur-X expliqué simplement : PDF/A-3, CII, et tout ce qu&#x27;on n&#x27;ose pas demander | Blog IO BILL</title>
+<meta name="description" content="Comprendre le format Factur-X 2026 sans être ingénieur : qu&#x27;est-ce qu&#x27;un PDF/A-3, comment fonctionne l&#x27;XML CII embarqué, qui peut le lire, comment le valider. Le guide pour les non-spécialistes."/>
+<meta name="keywords" content="factur-x format, PDF/A-3 explication, XML CII facture, lire factur-x, valider factur-x"/>
+<link rel="canonical" href="https://www.iobill.online/blog/factur-x-explique-simplement"/>
+<link rel="alternate" hreflang="fr-FR" href="https://www.iobill.online/blog/factur-x-explique-simplement"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<meta name="theme-color" content="#0c0b0f"/>
+<meta name="author" content="OWL'S INDUSTRY"/>
+
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://www.iobill.online/blog/factur-x-explique-simplement"/>
+<meta property="og:title" content="Factur-X expliqué simplement : PDF/A-3, CII, et tout ce qu&#x27;on n&#x27;ose pas demander"/>
+<meta property="og:description" content="Comprendre le format Factur-X 2026 sans être ingénieur : qu&#x27;est-ce qu&#x27;un PDF/A-3, comment fonctionne l&#x27;XML CII embarqué, qui peut le lire, comment le valider. Le guide pour les non-spécialistes."/>
+<meta property="og:image" content="https://www.iobill.online/og-image.png"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:site_name" content="IO BILL"/>
+<meta property="article:published_time" content="2026-04-08T08:00:00+02:00"/>
+<meta property="article:author" content="OWL'S INDUSTRY"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Factur-X expliqué simplement : PDF/A-3, CII, et tout ce qu&#x27;on n&#x27;ose pas demander"/>
+<meta name="twitter:description" content="Comprendre le format Factur-X 2026 sans être ingénieur : qu&#x27;est-ce qu&#x27;un PDF/A-3, comment fonctionne l&#x27;XML CII embarqué, qui peut le lire, comment le valider. Le guide pour les non-spécialistes."/>
+<meta name="twitter:image" content="https://www.iobill.online/og-image.png"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles-seo.css"/>
+
+<script defer data-domain="iobill.online" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.iobill.online/blog/factur-x-explique-simplement"
+  },
+  "headline": "Factur-X expliqué simplement : PDF/A-3, CII, et tout ce qu'on n'ose pas demander",
+  "description": "Comprendre le format Factur-X 2026 sans être ingénieur : qu'est-ce qu'un PDF/A-3, comment fonctionne l'XML CII embarqué, qui peut le lire, comment le valider. Le guide pour les non-spécialistes.",
+  "image": "https://www.iobill.online/og-image.png",
+  "author": {
+    "@type": "Organization",
+    "name": "OWL'S INDUSTRY",
+    "url": "https://www.iobill.online/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "OWL'S INDUSTRY",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.iobill.online/favicon.svg"
+    }
+  },
+  "datePublished": "2026-04-08",
+  "dateModified": "2026-04-08",
+  "inLanguage": "fr-FR"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://www.iobill.online/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.iobill.online/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Factur-X expliqué simplement : PDF/A-3, CII, et tout ce qu'on n'ose pas demander",
+      "item": "https://www.iobill.online/blog/factur-x-explique-simplement"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+
+<nav class="site-nav" aria-label="Navigation principale">
+  <a href="/" class="nav-logo">
+    IO <span>BILL</span>
+  </a>
+  <div class="nav-links">
+    <a href="/fonctionnalites">Fonctionnalités</a>
+    <a href="/tarifs">Tarifs</a>
+    <a href="/pour-qui/freelance">Pour qui ?</a>
+    <a href="/blog" style="color:var(--gold);">Blog</a>
+    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=nav&utm_campaign=launch" class="btn btn-ghost" style="padding:10px 22px;font-size:13px;">Connexion</a>
+    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=nav&utm_campaign=launch" class="btn btn-gold" style="padding:10px 22px;font-size:13px;" data-plausible-event-name="cta_top_nav">Essayer 14 jours</a>
+  </div>
+</nav>
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span style="color:var(--text);">Factur-X expliqué simplement : PDF/A-3, CII, et tout ce qu&#x27;on n&#x27;ose pas demander</span>
+</nav>
+
+<main id="main" class="page">
+
+  <header class="page-header">
+    <div class="page-eyebrow">Pédagogie</div>
+    <h1>Factur-X expliqué simplement : <em>PDF/A-3, CII</em>, et tout ce qu'on n'ose pas demander</h1>
+    <div style="font-size:13px;color:var(--muted);margin-top:12px;font-family:'JetBrains Mono',monospace;">
+      Publié le 2026-04-08 · Temps de lecture : 6 min · Par OWL'S INDUSTRY
+    </div>
+  </header>
+
+  <article>
+
+    <p class="page-lead">Factur-X est un mot qu'on entend partout depuis 2024, sans toujours bien comprendre ce qu'il contient. Cet article démonte le format pièce par pièce, sans jargon, pour que vous sachiez exactement ce qu'il y a sous le capot d'une facture électronique française.</p>
+
+    <h2>1. Une seule facture, deux personnalités</h2>
+    <p>Le génie de Factur-X tient en une phrase : <strong>c'est un PDF qui contient un XML caché à l'intérieur</strong>. Quand vous l'ouvrez avec Adobe Reader, vous voyez une facture comme avant. Quand un logiciel comptable le reçoit, il ignore l'image et lit directement les données structurées du XML.</p>
+    <p>Cette double personnalité résout le problème principal des autres formats électroniques (UBL, EDI) : avant Factur-X, soit on avait un PDF lisible mais inexploitable par un ordinateur, soit on avait un XML exploitable mais illisible pour un humain. Factur-X combine les deux.</p>
+
+    <h2>2. PDF/A-3 : le PDF qui sait porter des fichiers</h2>
+    <p>Un PDF normal est un format de fichier figé. PDF/A-3 est une variante <em>archive</em> du PDF qui ajoute deux propriétés essentielles :</p>
+    <ul>
+      <li><strong>Stabilité dans le temps</strong> : le PDF/A est conçu pour être lisible dans 50 ans même si Adobe disparaît demain. Toutes les polices sont incorporées, aucune dépendance externe ;</li>
+      <li><strong>Capacité à porter des pièces jointes</strong> : c'est ce qui permet d'embarquer un XML, une image, un certificat de signature, etc. à l'intérieur du PDF.</li>
+    </ul>
+    <p>Quand vous générez un PDF "normal" à partir d'un éditeur (Word, LibreOffice), vous obtenez un PDF classique. Pour produire du PDF/A-3, il faut un outil spécifique — c'est ce que fait IO BILL automatiquement à chaque émission de facture.</p>
+
+    <h2>3. CII : le XML standard européen</h2>
+    <p>Le XML embarqué dans Factur-X suit la norme <strong>CII (Cross Industry Invoice)</strong>, elle-même définie par l'ONU/CEFACT et reprise par la norme européenne EN 16931. Concrètement, c'est un fichier qui ressemble à ça :</p>
+    <pre style="background:var(--bg3); padding:16px; border-radius:8px; overflow-x:auto; font-size:12px; color:var(--text2); border:1px solid var(--border);"><code>&lt;rsm:CrossIndustryInvoice&gt;
+  &lt;rsm:ExchangedDocument&gt;
+    &lt;ram:ID&gt;F2026-042&lt;/ram:ID&gt;
+    &lt;ram:IssueDateTime&gt;
+      &lt;udt:DateTimeString format="102"&gt;20260415&lt;/udt:DateTimeString&gt;
+    &lt;/ram:IssueDateTime&gt;
+  &lt;/rsm:ExchangedDocument&gt;
+  &lt;rsm:SupplyChainTradeTransaction&gt;
+    &lt;ram:IncludedSupplyChainTradeLineItem&gt;
+      &lt;ram:SpecifiedTradeProduct&gt;
+        &lt;ram:Name&gt;Prestation de design&lt;/ram:Name&gt;
+      &lt;/ram:SpecifiedTradeProduct&gt;
+      &lt;ram:SpecifiedLineTradeAgreement&gt;
+        &lt;ram:NetPriceProductTradePrice&gt;
+          &lt;ram:ChargeAmount&gt;500.00&lt;/ram:ChargeAmount&gt;
+        &lt;/ram:NetPriceProductTradePrice&gt;
+      &lt;/ram:SpecifiedLineTradeAgreement&gt;
+    &lt;/ram:IncludedSupplyChainTradeLineItem&gt;
+  &lt;/rsm:SupplyChainTradeTransaction&gt;
+&lt;/rsm:CrossIndustryInvoice&gt;</code></pre>
+    <p>Inutile de comprendre la syntaxe — l'important est de savoir que <strong>chaque donnée a un emplacement précis et standardisé</strong>. Le numéro de facture est toujours dans <code>ram:ID</code>, le total HT toujours dans <code>ram:LineTotalAmount</code>, etc. C'est ce qui permet à n'importe quel logiciel comptable européen de lire correctement votre facture, sans intervention humaine.</p>
+
+    <h2>4. Les profils Factur-X</h2>
+    <p>Tous les Factur-X ne contiennent pas le même niveau de détail. Cinq profils existent, du plus simple au plus complet :</p>
+    <ol>
+      <li><strong>MINIMUM</strong> : juste les totaux, pour les notes de frais ;</li>
+      <li><strong>BASIC WL (Without Lines)</strong> : totaux + références, pas de détail des lignes ;</li>
+      <li><strong>BASIC</strong> : avec le détail des lignes ;</li>
+      <li><strong>EN 16931</strong> (anciennement Comfort) : profil "B2B européen standard" — <strong>celui exigé par la réforme française</strong> ;</li>
+      <li><strong>EXTENDED</strong> : toutes les extensions sectorielles (logistique, automobile, etc.).</li>
+    </ol>
+    <p>IO BILL génère par défaut le profil EN 16931, qui couvre 100 % des cas usuels et qui est exigé par la PDP française.</p>
+
+    <h2>5. Comment vérifier qu'un Factur-X reçu est valide ?</h2>
+    <p>Plusieurs outils gratuits permettent de valider un Factur-X reçu :</p>
+    <ul>
+      <li><a href="https://services.fnfe-mpe.org/" target="_blank" rel="noopener">Validateur FNFE-MPE</a> : l'outil officiel de l'association qui anime le standard ;</li>
+      <li><a href="https://factur-x.org/" target="_blank" rel="noopener">factur-x.org</a> : documentation technique et outils ;</li>
+      <li>Côté IO BILL : tout Factur-X reçu via votre PDP est automatiquement validé en arrière-plan.</li>
+    </ul>
+    <p>Si la validation échoue, c'est généralement à cause d'un PDF non conforme PDF/A-3, ou d'un XML qui ne respecte pas le schéma EN 16931. Dans ce cas, il faut renvoyer la facture à l'émetteur en lui demandant de corriger.</p>
+
+    <h2>6. En résumé</h2>
+    <p>Factur-X = PDF visuellement identique + XML structuré caché à l'intérieur. Le PDF rassure les humains, le XML est lu par les ordinateurs. Tout l'écosystème français (PDP, Chorus Pro, logiciels comptables) sait le lire et le produire.</p>
+    <p>Pour vous, en tant qu'émetteur, le format est <strong>complètement transparent</strong> si vous utilisez un outil moderne : vous saisissez votre facture comme d'habitude, et le PDF Factur-X est généré automatiquement.</p>
+
+
+    <h2>Voir aussi</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/fonctionnalites/factur-x">
+        <div class="related-card-label">Guide</div>
+        <div class="related-card-title">Factur-X 2026/2027 expliqué</div>
+        <div class="related-card-desc">Le guide complet de la réforme française pour les TPE.</div>
+      </a>
+      <a class="related-card" href="/blog/facture-electronique-2026-tpe">
+        <div class="related-card-label">Article</div>
+        <div class="related-card-title">Réforme 2026 : ce qui change</div>
+        <div class="related-card-desc">Le calendrier, les obligations, les sanctions pour les TPE.</div>
+      </a>
+      <a class="related-card" href="/fonctionnalites/facturation">
+        <div class="related-card-label">Fonctionnalité</div>
+        <div class="related-card-title">Facturation classique</div>
+        <div class="related-card-desc">Génération automatique de Factur-X conforme EN 16931.</div>
+      </a>
+    </div>
+
+  </article>
+
+  <div class="cta-block">
+    <h3>Essayer IO BILL 14 jours, gratuitement</h3>
+    <p>Sans carte bancaire. Sans engagement. Résiliation en 1 clic.</p>
+    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=blog&utm_campaign=launch" class="btn btn-gold btn-lg" data-plausible-event-name="cta_blog_essayer">Créer mon compte →</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-col">
+    <a href="/" class="nav-logo" style="font-size:20px;">
+    IO <span>BILL</span>
+    </a>
+    <div class="copy" style="margin-top:12px;">La facturation française nouvelle génération.</div>
+    <div class="copy" style="margin-top:10px;">© 2026 OWL'S INDUSTRY · Made in France 🇫🇷</div>
+    <div class="copy">SAS au capital de 4 000 € · SIRET 852 788 470 00018 · TVA FR25852788470</div>
+  </div>
+  <div class="footer-col">
+    <strong>Produit</strong>
+    <a href="/fonctionnalites">Fonctionnalités</a>
+    <a href="/fonctionnalites/factur-x">Factur-X 2026</a>
+    <a href="/fonctionnalites/banque">Banque connectée</a>
+    <a href="/fonctionnalites/cabinet">Mode cabinet</a>
+    <a href="/fonctionnalites/mobile">App mobile</a>
+    <a href="/tarifs">Tarifs</a>
+    <a href="/comparatif-logiciels-facturation">Pourquoi IO BILL ?</a>
+    <a href="/changelog">Nouveautés</a>
+  </div>
+  <div class="footer-col">
+    <strong>Pour qui ?</strong>
+    <a href="/pour-qui/freelance">Freelances</a>
+    <a href="/pour-qui/tpe">TPE / PME</a>
+    <a href="/pour-qui/cabinet-comptable">Cabinets comptables</a>
+    <a href="/pour-qui/btp">BTP / artisans</a>
+    <a href="/blog">Blog</a>
+    <a href="/aide">Centre d'aide</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="footer-col">
+    <strong>Légal &amp; sécurité</strong>
+    <a href="/legal/cgu">CGU</a>
+    <a href="/legal/cgv">CGV</a>
+    <a href="/legal/confidentialite">Confidentialité (RGPD)</a>
+    <a href="/legal/mentions-legales">Mentions légales</a>
+    <a href="/legal/cookies">Cookies</a>
+    <a href="/legal/dpa">DPA (téléchargeable)</a>
+  </div>
+</footer>
+
+</body>
+</html>

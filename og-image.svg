@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Fond -->
+  <rect width="1200" height="630" fill="#0c0b0f"/>
+
+  <!-- Glow doré -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d4a843" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#d4a843" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4a843"/>
+      <stop offset="100%" stop-color="#e8c36a"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="600" cy="315" rx="700" ry="500" fill="url(#glow)"/>
+
+  <!-- Cadre subtil -->
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#2a2838" stroke-width="2"/>
+
+  <!-- Eyebrow -->
+  <text x="100" y="160" font-family="DM Sans, sans-serif" font-size="22" font-weight="600" fill="#d4a843" letter-spacing="6">
+    OWL&#39;S INDUSTRY
+  </text>
+
+  <!-- Logo : I + O -->
+  <rect x="100" y="200" width="22" height="170" rx="4" fill="url(#goldGrad)"/>
+  <circle cx="220" cy="285" r="65" fill="none" stroke="url(#goldGrad)" stroke-width="22"/>
+  <text x="320" y="310" font-family="Syne, sans-serif" font-size="100" font-weight="800" fill="#f0eee8" letter-spacing="-3">
+    BILL
+  </text>
+
+  <!-- Headline -->
+  <text x="100" y="450" font-family="Syne, sans-serif" font-size="46" font-weight="800" fill="#f0eee8" letter-spacing="-1.5">
+    La facturation française qui pense
+  </text>
+  <text x="100" y="500" font-family="Syne, sans-serif" font-size="46" font-weight="800" fill="#d4a843" letter-spacing="-1.5">
+    comme vous.
+  </text>
+
+  <!-- Footer line -->
+  <text x="100" y="565" font-family="DM Sans, sans-serif" font-size="18" font-weight="500" fill="#a8a4b4">
+    Conforme Factur-X 2026/2027 · Hébergé en Europe · Made in France
+  </text>
+</svg>

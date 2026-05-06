@@ -1,0 +1,107 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options",           "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options",    "value": "nosniff" },
+        { "key": "Referrer-Policy",           "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy",        "value": "camera=(), microphone=(), geolocation=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
+        { "key": "Content-Security-Policy",   "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://plausible.io; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://app.iobill.online; upgrade-insecure-requests" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=300, s-maxage=300, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/styles-seo.css",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/og-image.(png|svg)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/favicon.svg",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=3600" },
+        { "key": "Content-Type",  "value": "application/xml; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" },
+        { "key": "Content-Type",  "value": "text/plain; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/legal/dpa.pdf",
+      "headers": [
+        { "key": "Cache-Control",        "value": "public, max-age=86400" },
+        { "key": "Content-Type",         "value": "application/pdf" },
+        { "key": "Content-Disposition",  "value": "inline; filename=\"IO-BILL-DPA-CCT-EU.pdf\"" }
+      ]
+    }
+  ],
+  "redirects": [
+    { "source": "/cgu",                              "destination": "/legal/cgu",                  "permanent": true },
+    { "source": "/cgv",                              "destination": "/legal/cgv",                  "permanent": true },
+    { "source": "/confidentialite",                  "destination": "/legal/confidentialite",      "permanent": true },
+    { "source": "/politique-confidentialite",        "destination": "/legal/confidentialite",      "permanent": true },
+    { "source": "/mentions-legales",                 "destination": "/legal/mentions-legales",     "permanent": true },
+    { "source": "/cookies",                          "destination": "/legal/cookies",              "permanent": true },
+    { "source": "/dpa",                              "destination": "/legal/dpa",                  "permanent": true },
+    { "source": "/legal",                            "destination": "/legal/mentions-legales",     "permanent": true },
+
+    { "source": "/factur-x",                         "destination": "/fonctionnalites/factur-x",   "permanent": true },
+    { "source": "/factur-x-2026",                    "destination": "/fonctionnalites/factur-x",   "permanent": true },
+    { "source": "/facturation",                      "destination": "/fonctionnalites/facturation","permanent": true },
+    { "source": "/cabinet",                          "destination": "/fonctionnalites/cabinet",    "permanent": true },
+    { "source": "/expert-comptable",                 "destination": "/fonctionnalites/cabinet",    "permanent": true },
+    { "source": "/banque",                           "destination": "/fonctionnalites/banque",     "permanent": true },
+    { "source": "/dsp2",                             "destination": "/fonctionnalites/banque",     "permanent": true },
+    { "source": "/mobile",                           "destination": "/fonctionnalites/mobile",     "permanent": true },
+
+    { "source": "/freelance",                        "destination": "/pour-qui/freelance",         "permanent": true },
+    { "source": "/tpe",                              "destination": "/pour-qui/tpe",               "permanent": true },
+    { "source": "/btp",                              "destination": "/pour-qui/btp",               "permanent": true },
+    { "source": "/cabinet-comptable",                "destination": "/pour-qui/cabinet-comptable", "permanent": true },
+
+    { "source": "/help",                             "destination": "/aide",                       "permanent": true },
+    { "source": "/support",                          "destination": "/aide",                       "permanent": true },
+    { "source": "/changelog/",                       "destination": "/changelog",                  "permanent": true },
+
+    { "source": "/comparatif",                       "destination": "/comparatif-logiciels-facturation", "permanent": true },
+    { "source": "/comparatif-logiciels",             "destination": "/comparatif-logiciels-facturation", "permanent": true },
+    { "source": "/pourquoi-iobill",                  "destination": "/comparatif-logiciels-facturation", "permanent": true },
+    { "source": "/alternative-pennylane",            "destination": "/comparatif-logiciels-facturation", "permanent": true },
+    { "source": "/alternative-indy",                 "destination": "/comparatif-logiciels-facturation", "permanent": true },
+    { "source": "/alternative-tiime",                "destination": "/comparatif-logiciels-facturation", "permanent": true },
+    { "source": "/alternative-freebe",               "destination": "/comparatif-logiciels-facturation", "permanent": true },
+    { "source": "/alternative-henrri",               "destination": "/comparatif-logiciels-facturation", "permanent": true },
+    { "source": "/alternative-abby",                 "destination": "/comparatif-logiciels-facturation", "permanent": true },
+    { "source": "/alternative-quickbooks",           "destination": "/comparatif-logiciels-facturation", "permanent": true },
+    { "source": "/alternative-sage",                 "destination": "/comparatif-logiciels-facturation", "permanent": true },
+    { "source": "/vs-pennylane",                     "destination": "/comparatif-logiciels-facturation", "permanent": true },
+    { "source": "/vs-tiime",                         "destination": "/comparatif-logiciels-facturation", "permanent": true },
+    { "source": "/vs-indy",                          "destination": "/comparatif-logiciels-facturation", "permanent": true }
+  ]
+}
