@@ -6,14 +6,8 @@
   "author": "OWL'S INDUSTRY",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "echo 'Static site, no build step'",
-    "deploy": "vercel --prod",
-    "lint:html": "echo 'Add html-validate later if needed'"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "vercel": "^39.0.0"
+    "dev": "npx vercel dev",
+    "deploy": "npx vercel --prod"
   },
   "engines": {
     "node": ">=20.0.0"
