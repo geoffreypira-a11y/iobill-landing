@@ -31,7 +31,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="/styles-seo.css"/>
 
-<script defer data-domain="iobill.online" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
 
 <script type="application/ld+json">
 {
@@ -273,6 +272,119 @@
     <a href="/legal/dpa">DPA (téléchargeable)</a>
   </div>
 </footer>
+
+<!-- ===== BANDEAU COOKIES (RGPD/CNIL) ===== -->
+<style>
+  .cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:none;padding:20px;background:rgba(12,11,15,.97);backdrop-filter:blur(12px);border-top:1px solid var(--border);box-shadow:0 -8px 40px rgba(0,0,0,.4)}
+  .cookie-banner.show{display:block;animation:cookieUp .4s ease}
+  @keyframes cookieUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+  .cookie-inner{max-width:1100px;margin:0 auto;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+  .cookie-text{flex:1;min-width:260px;font-size:13.5px;line-height:1.6;color:var(--text2)}
+  .cookie-text strong{color:var(--text);font-family:'Syne',sans-serif}
+  .cookie-text a{color:var(--gold);text-decoration:underline}
+  .cookie-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .cookie-btn{padding:11px 20px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--text2);transition:all .25s;white-space:nowrap}
+  .cookie-btn:hover{border-color:var(--gold-dim);color:var(--text)}
+  .cookie-btn.accept{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;border-color:var(--gold)}
+  .cookie-btn.accept:hover{filter:brightness(1.08)}
+  .cookie-settings{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-top:16px;display:none}
+  .cookie-settings.show{display:block}
+  .cookie-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:10px 0;border-bottom:1px solid var(--border)}
+  .cookie-row:last-child{border-bottom:none}
+  .cookie-row-info{flex:1}
+  .cookie-row-title{font-size:13px;font-weight:600;color:var(--text);font-family:'Syne',sans-serif;margin-bottom:2px}
+  .cookie-row-desc{font-size:12px;color:var(--muted);line-height:1.5}
+  .cookie-switch{position:relative;width:42px;height:24px;flex-shrink:0;margin-top:2px}
+  .cookie-switch input{opacity:0;width:0;height:0}
+  .cookie-slider{position:absolute;inset:0;background:var(--border);border-radius:24px;transition:.3s;cursor:pointer}
+  .cookie-slider::before{content:"";position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s}
+  .cookie-switch input:checked+.cookie-slider{background:var(--gold)}
+  .cookie-switch input:checked+.cookie-slider::before{transform:translateX(18px)}
+  .cookie-switch input:disabled+.cookie-slider{opacity:.5;cursor:not-allowed}
+  .cookie-float{position:fixed;left:16px;bottom:16px;z-index:9998;width:42px;height:42px;border-radius:50%;background:var(--bg2);border:1px solid var(--border);cursor:pointer;display:none;align-items:center;justify-content:center;font-size:18px;transition:all .25s}
+  .cookie-float:hover{border-color:var(--gold);transform:scale(1.05)}
+  .cookie-float.show{display:flex}
+  @media(max-width:640px){.cookie-inner{flex-direction:column;align-items:stretch}.cookie-actions{justify-content:stretch}.cookie-btn{flex:1;text-align:center}}
+</style>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Gestion des cookies" aria-live="polite">
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <strong>🍪 Votre vie privée compte.</strong><br/>
+      Nous utilisons une mesure d'audience anonyme (Plausible, sans cookie) pour améliorer le site. Aucun traceur publicitaire, aucune revente de données. Vous gardez le contrôle. <a href="/legal/cookies">En savoir plus</a>.
+    </div>
+    <div class="cookie-actions">
+      <button class="cookie-btn" onclick="cookieToggleSettings()">Personnaliser</button>
+      <button class="cookie-btn" onclick="cookieRefuseAll()">Refuser</button>
+      <button class="cookie-btn accept" onclick="cookieAcceptAll()">Tout accepter</button>
+    </div>
+  </div>
+  <div class="cookie-settings" id="cookieSettings">
+    <div class="cookie-inner" style="display:block;">
+      <div class="cookie-row">
+        <div class="cookie-row-info">
+          <div class="cookie-row-title">Cookies strictement nécessaires</div>
+          <div class="cookie-row-desc">Indispensables au fonctionnement du site (sécurité, préférences). Toujours actifs, pas de consentement requis.</div>
+        </div>
+        <label class="cookie-switch"><input type="checkbox" checked disabled/><span class="cookie-slider"></span></label>
+      </div>
+      <div class="cookie-row">
+        <div class="cookie-row-info">
+          <div class="cookie-row-title">Mesure d'audience (Plausible)</div>
+          <div class="cookie-row-desc">Statistiques de visite anonymes, sans cookie ni donnée personnelle. Nous aide à améliorer le site.</div>
+        </div>
+        <label class="cookie-switch"><input type="checkbox" id="cookieAnalytics"/><span class="cookie-slider"></span></label>
+      </div>
+      <div class="cookie-row">
+        <div class="cookie-row-info">
+          <div class="cookie-row-title">Marketing &amp; réseaux sociaux</div>
+          <div class="cookie-row-desc">Non utilisés actuellement. Réservé pour d'éventuels contenus intégrés futurs (vidéos, retargeting).</div>
+        </div>
+        <label class="cookie-switch"><input type="checkbox" id="cookieMarketing"/><span class="cookie-slider"></span></label>
+      </div>
+      <div style="text-align:right;margin-top:14px;">
+        <button class="cookie-btn accept" onclick="cookieSaveSettings()">Enregistrer mes choix</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="cookie-float" id="cookieFloat" onclick="cookieReopen()" aria-label="Gérer les cookies" title="Gérer les cookies">🍪</button>
+
+<script>
+(function(){
+  var KEY='iobill_cookie_consent_v1';
+  var banner=document.getElementById('cookieBanner');
+  var settings=document.getElementById('cookieSettings');
+  var floatBtn=document.getElementById('cookieFloat');
+
+  function loadPlausible(){
+    if(window.__plausibleLoaded)return;
+    window.__plausibleLoaded=true;
+    var s=document.createElement('script');
+    s.defer=true;s.setAttribute('data-domain','iobill.online');
+    s.src='https://plausible.io/js/script.outbound-links.tagged-events.js';
+    document.head.appendChild(s);
+    window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};
+  }
+  function getConsent(){try{return JSON.parse(localStorage.getItem(KEY))}catch(e){return null}}
+  function setConsent(o){o.date=new Date().toISOString();try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
+  function apply(c){ if(c&&c.analytics){loadPlausible();} }
+  function hideBanner(){banner.classList.remove('show');floatBtn.classList.add('show');}
+  function showBanner(){banner.classList.add('show');floatBtn.classList.remove('show');}
+
+  window.cookieAcceptAll=function(){var c={necessary:true,analytics:true,marketing:true};setConsent(c);apply(c);hideBanner();};
+  window.cookieRefuseAll=function(){var c={necessary:true,analytics:false,marketing:false};setConsent(c);hideBanner();};
+  window.cookieToggleSettings=function(){settings.classList.toggle('show');var c=getConsent();if(c){document.getElementById('cookieAnalytics').checked=!!c.analytics;document.getElementById('cookieMarketing').checked=!!c.marketing;}};
+  window.cookieSaveSettings=function(){var c={necessary:true,analytics:document.getElementById('cookieAnalytics').checked,marketing:document.getElementById('cookieMarketing').checked};setConsent(c);apply(c);settings.classList.remove('show');hideBanner();};
+  window.cookieReopen=function(){var c=getConsent();if(c){document.getElementById('cookieAnalytics').checked=!!c.analytics;document.getElementById('cookieMarketing').checked=!!c.marketing;}settings.classList.add('show');showBanner();};
+
+  var consent=getConsent();
+  if(consent){apply(consent);floatBtn.classList.add('show');}
+  else{setTimeout(showBanner,800);}
+})();
+</script>
+<!-- ===== FIN BANDEAU COOKIES ===== -->
 
 </body>
 </html>
