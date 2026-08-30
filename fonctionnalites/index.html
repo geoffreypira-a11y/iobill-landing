@@ -131,7 +131,7 @@
 
     <div class="callout gold">
       <div class="callout-title">⚡ La promesse</div>
-      <p style="margin:0;">Une seule application web (avec ses apps mobiles compagnon iOS et Android) couvre <strong>facturation, devis, achats, banque, TVA et URSSAF</strong>. Aucun module en supplément à acheter pour atteindre la conformité 2026/2027 — la <strong>PDP de transmission e-invoicing est incluse</strong> à partir du plan Pro. Vous ne payez qu'un seul abonnement, transparent.</p>
+      <p style="margin:0;">Une seule application web (avec sa PWA mobile) couvre <strong>facturation, devis, achats et aide à la TVA</strong>, avec la <strong>transmission e-invoicing via PDP Peppol incluse</strong> pour la conformité 2026/2027. D'autres modules (URSSAF, banque connectée, signature électronique, export FEC) arriveront progressivement, <strong>sans surcoût</strong>. Vous ne payez qu'un seul abonnement, transparent.</p>
     </div>
 
     <h2><span class="num">1.</span>Facturation &amp; conformité</h2>
@@ -148,33 +148,33 @@
         <div class="feat-desc">Factures, devis, avoirs, factures d'acompte, situations de travaux. Toutes les mentions légales pré-remplies. Numérotation automatique.</div>
         <div class="feat-link">Voir le détail →</div>
       </a>
-      <a href="/fonctionnalites/facturation#signature" class="feat-tile">
+      <a href="/fonctionnalites/facturation#signature" class="feat-tile" style="opacity:0.85;">
         <span class="feat-icon">✍️</span>
-        <div class="feat-title">Signature électronique</div>
-        <div class="feat-desc">Yousign intégré. Vos clients signent leurs devis depuis leur mobile en 30 secondes. Valeur juridique eIDAS. Devis signé = facture pré-remplie.</div>
-        <div class="feat-link">Voir le détail →</div>
+        <div class="feat-title">Signature électronique <span style="font-size:10px; padding:2px 8px; border-radius:100px; background:rgba(74,158,255,0.12); color:var(--blue); font-weight:700; letter-spacing:1px; vertical-align:middle;">BIENTÔT</span></div>
+        <div class="feat-desc">Yousign intégré (valeur juridique eIDAS) : vos clients signeront leurs devis depuis leur mobile en 30 secondes, le devis signé deviendra une facture pré-remplie. En cours de développement.</div>
+        <div class="feat-link">En savoir plus →</div>
       </a>
     </div>
 
     <h2><span class="num">2.</span>Encaissement &amp; suivi de trésorerie</h2>
     <div class="feat-grid">
-      <a href="/fonctionnalites/banque" class="feat-tile">
+      <a href="/fonctionnalites/banque" class="feat-tile" style="opacity:0.85;">
         <span class="feat-icon">🏦</span>
-        <div class="feat-title">Banque connectée DSP2</div>
-        <div class="feat-desc">Reliez votre compte pro via Bridge by BPCE (DSP2 agréé). Auto-lettrage IA : chaque virement reçu est associé à la facture correspondante.</div>
-        <div class="feat-link">Voir le détail →</div>
+        <div class="feat-title">Banque connectée DSP2 <span style="font-size:10px; padding:2px 8px; border-radius:100px; background:rgba(74,158,255,0.12); color:var(--blue); font-weight:700; letter-spacing:1px; vertical-align:middle;">BIENTÔT</span></div>
+        <div class="feat-desc">Reliez votre compte pro via Bridge by BPCE (DSP2 agréé). Auto-lettrage IA : chaque virement reçu associé à la facture correspondante. En cours de développement.</div>
+        <div class="feat-link">En savoir plus →</div>
       </a>
-      <a href="/fonctionnalites/facturation#stripe" class="feat-tile">
+      <a href="/fonctionnalites/facturation#stripe" class="feat-tile" style="opacity:0.85;">
         <span class="feat-icon">💳</span>
-        <div class="feat-title">Encaissement Stripe</div>
-        <div class="feat-desc">Un Payment Link Stripe sur chaque facture (CB, virement SEPA, Bancontact). Réconciliation automatique côté banque. Frais standard Stripe.</div>
-        <div class="feat-link">Voir le détail →</div>
+        <div class="feat-title">Encaissement en ligne <span style="font-size:10px; padding:2px 8px; border-radius:100px; background:rgba(74,158,255,0.12); color:var(--blue); font-weight:700; letter-spacing:1px; vertical-align:middle;">BIENTÔT</span></div>
+        <div class="feat-desc">Un lien de paiement Stripe sur chaque facture (CB, virement SEPA, Bancontact), avec réconciliation automatique. En cours de développement, inclus sans surcoût.</div>
+        <div class="feat-link">En savoir plus →</div>
       </a>
-      <a href="/fonctionnalites/banque#lettrage" class="feat-tile">
+      <a href="/fonctionnalites/banque#lettrage" class="feat-tile" style="opacity:0.85;">
         <span class="feat-icon">🤖</span>
-        <div class="feat-title">Auto-lettrage IA</div>
-        <div class="feat-desc">L'IA détecte le rapprochement entre vos écritures bancaires et vos factures. Correction manuelle en un clic si l'IA hésite.</div>
-        <div class="feat-link">Voir le détail →</div>
+        <div class="feat-title">Auto-lettrage IA <span style="font-size:10px; padding:2px 8px; border-radius:100px; background:rgba(74,158,255,0.12); color:var(--blue); font-weight:700; letter-spacing:1px; vertical-align:middle;">BIENTÔT</span></div>
+        <div class="feat-desc">L'IA détectera le rapprochement entre vos écritures bancaires et vos factures. Correction manuelle en un clic si l'IA hésite. En cours de développement.</div>
+        <div class="feat-link">En savoir plus →</div>
       </a>
     </div>
 
@@ -210,15 +210,15 @@
       </a>
       <a href="/fonctionnalites/facturation#urssaf" class="feat-tile">
         <span class="feat-icon">🇫🇷</span>
-        <div class="feat-title">Module URSSAF</div>
-        <div class="feat-desc">Auto-entrepreneur (BIC, BNC, libéral), TNS (BIC réel), assimilé salarié. Pré-calcul des cotisations selon votre régime. Échéances rappelées.</div>
-        <div class="feat-link">Voir le détail →</div>
+        <div class="feat-title">Aide URSSAF <span style="font-size:10px; padding:2px 8px; border-radius:100px; background:rgba(74,158,255,0.12); color:var(--blue); font-weight:700; letter-spacing:1px; vertical-align:middle;">BIENTÔT</span></div>
+        <div class="feat-desc">Auto-entrepreneur (BIC, BNC, libéral), TNS (BIC réel). Pré-calcul des cotisations selon votre régime, échéances rappelées. En cours de développement, incluse sans surcoût.</div>
+        <div class="feat-link">En savoir plus →</div>
       </a>
-      <a href="/fonctionnalites/cabinet#fec" class="feat-tile">
+      <a href="/fonctionnalites/cabinet#fec" class="feat-tile" style="opacity:0.85;">
         <span class="feat-icon">📤</span>
-        <div class="feat-title">Export FEC</div>
-        <div class="feat-desc">Fichier des Écritures Comptables conforme à l'arrêté du 29 juillet 2013. Compatible Cegid, Sage, ACD, Quadratus, Pennylane.</div>
-        <div class="feat-link">Voir le détail →</div>
+        <div class="feat-title">Export FEC <span style="font-size:10px; padding:2px 8px; border-radius:100px; background:rgba(74,158,255,0.12); color:var(--blue); font-weight:700; letter-spacing:1px; vertical-align:middle;">BIENTÔT</span></div>
+        <div class="feat-desc">Fichier des Écritures Comptables conforme à l'arrêté du 29 juillet 2013. Connecteurs Cegid, Sage, Pennylane, Tiime. En cours de développement.</div>
+        <div class="feat-link">En savoir plus →</div>
       </a>
     </div>
 
@@ -295,7 +295,7 @@
       <a class="related-card" href="/pour-qui/freelance">
         <div class="related-card-label">Profil</div>
         <div class="related-card-title">IO BILL pour freelances</div>
-        <div class="related-card-desc">Le plan Pro et son module URSSAF micro-entrepreneur.</div>
+        <div class="related-card-desc">Le plan Pro à 14,90 € HT/mois, tout inclus, aide URSSAF bientôt disponible.</div>
       </a>
       <a class="related-card" href="/comparatif-logiciels-facturation">
         <div class="related-card-label">Comparatif</div>
