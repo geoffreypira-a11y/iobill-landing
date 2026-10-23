@@ -66,6 +66,8 @@
     }
   ],
   "redirects": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "iobill.online" }], "destination": "https://www.iobill.online/:path*", "permanent": true },
+
     { "source": "/cgu",                              "destination": "/legal/cgu",                  "permanent": true },
     { "source": "/cgv",                              "destination": "/legal/cgv",                  "permanent": true },
     { "source": "/confidentialite",                  "destination": "/legal/confidentialite",      "permanent": true },

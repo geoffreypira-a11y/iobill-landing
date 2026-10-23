@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Facturation IO BILL — Devis, factures Factur-X, avoirs, OCR achats | Détails</title>
-<meta name="description" content="La facturation IO BILL en détail : devis, factures conformes Factur-X 2026/2027, factures d'acompte, situations de travaux BTP, avoirs, OCR achats, aide à la déclaration de TVA. Signature Yousign, encaissement Stripe et URSSAF bientôt disponibles."/>
+<title>Devis, factures Factur-X, avoirs, OCR achats | IO BILL</title>
+<meta name="description" content="Devis acceptés en ligne, factures Factur-X, avoirs, OCR des achats, réception e-invoicing et aide à la TVA : la facturation IO BILL en détail."/>
 <meta name="keywords" content="logiciel facturation française, devis signature électronique, facture acompte, situations travaux BTP, OCR facture achat Mistral, encaissement Stripe Payment Link, déclaration TVA CA3 CA12, déclaration URSSAF micro entrepreneur, API facturation REST"/>
 <link rel="canonical" href="https://www.iobill.online/fonctionnalites/facturation"/>
 <link rel="alternate" hreflang="fr-FR" href="https://www.iobill.online/fonctionnalites/facturation"/>
@@ -15,15 +15,15 @@
 
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="https://www.iobill.online/fonctionnalites/facturation"/>
-<meta property="og:title" content="Facturation IO BILL — devis, factures Factur-X, OCR, TVA"/>
-<meta property="og:description" content="Tout ce qu'IO BILL fait sur la facturation : devis, factures conformes Factur-X, OCR achats, aide à la déclaration de TVA. Signature, Stripe et URSSAF bientôt."/>
+<meta property="og:title" content="Devis, factures Factur-X, avoirs, OCR achats"/>
+<meta property="og:description" content="Devis acceptés en ligne, factures Factur-X, avoirs, OCR des achats, réception e-invoicing et aide à la TVA : la facturation IO BILL en détail."/>
 <meta property="og:image" content="https://www.iobill.online/og-image.png"/>
 <meta property="og:locale" content="fr_FR"/>
 <meta property="og:site_name" content="IO BILL"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Facturation IO BILL — vue détaillée"/>
-<meta name="twitter:description" content="Devis, factures Factur-X, OCR achats, aide TVA. Signature, Stripe et URSSAF bientôt disponibles."/>
+<meta name="twitter:title" content="Devis, factures Factur-X, avoirs, OCR achats"/>
+<meta name="twitter:description" content="Devis acceptés en ligne, factures Factur-X, avoirs, OCR des achats, réception e-invoicing et aide à la TVA : la facturation IO BILL en détail."/>
 <meta name="twitter:image" content="https://www.iobill.online/og-image.png"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -43,7 +43,7 @@
   "author": {"@type": "Organization", "name": "OWL'S INDUSTRY", "url": "https://www.iobill.online/"},
   "publisher": {"@type": "Organization", "name": "OWL'S INDUSTRY", "logo": {"@type": "ImageObject", "url": "https://www.iobill.online/favicon.svg"}},
   "datePublished": "2026-05-05",
-  "dateModified": "2026-05-05",
+  "dateModified": "2026-10-23",
   "inLanguage": "fr-FR"
 }
 </script>
@@ -58,6 +58,8 @@
   ]
 }
 </script>
+  <!-- Mesure d'audience Vercel Web Analytics : sans cookie, sans donnée personnelle -->
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -72,8 +74,8 @@
     <a href="/tarifs">Tarifs</a>
     <a href="/pour-qui/freelance">Pour qui ?</a>
     <a href="/blog">Blog</a>
-    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=nav&utm_campaign=launch" class="btn btn-ghost" style="padding:10px 22px;font-size:13px;">Connexion</a>
-    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=nav&utm_campaign=launch" class="btn btn-gold" style="padding:10px 22px;font-size:13px;" data-plausible-event-name="cta_top_nav">Essayer 7 jours</a>
+    <a href="https://app.iobill.online/" class="btn btn-ghost" style="padding:10px 22px;font-size:13px;">Connexion</a>
+    <a href="https://app.iobill.online/?mode=signup&amp;utm_source=iobill.online&amp;utm_medium=site&amp;utm_campaign=fonctionnalites-facturation" class="btn btn-gold" style="padding:10px 22px;font-size:13px;" data-plausible-event-name="cta_top_nav">Essayer 7 jours</a>
   </div>
 </nav>
 
@@ -94,12 +96,12 @@
     <div class="toc">
       <div class="toc-title">Sommaire</div>
       <ol>
-        <li><a href="#documents">Documents émis : devis, factures, avoirs, acomptes</a></li>
+        <li><a href="#documents">Documents émis : devis, factures, avoirs</a></li>
         <li><a href="#signature">Signature électronique Yousign</a></li>
         <li><a href="#stripe">Encaissement Stripe (Payment Link)</a></li>
         <li><a href="#ocr">OCR achats Mistral</a></li>
-        <li><a href="#fournisseurs">Boîte de réception PDP des achats</a></li>
-        <li><a href="#ged">GED des justificatifs (10 ans)</a></li>
+        <li><a href="#fournisseurs">Réception des factures électroniques fournisseurs</a></li>
+        <li><a href="#ged">Justificatifs centralisés</a></li>
         <li><a href="#tva">Module TVA (CA3, CA12, franchise)</a></li>
         <li><a href="#urssaf">Module URSSAF (micro, TNS, assimilé)</a></li>
         <li><a href="#api">API REST publique</a></li>
@@ -108,17 +110,15 @@
     </div>
 
     <h2 id="documents"><span class="num">1.</span>Documents émis</h2>
-    <p>IO BILL gère tous les types de documents commerciaux et fiscaux courants en France :</p>
+    <p>IO BILL gère les principaux documents commerciaux et fiscaux d'une TPE française :</p>
     <ul>
-      <li><strong>Devis</strong> : modèle libre, mentions légales pré-remplies, durée de validité paramétrable, conversion en facture en un clic ;</li>
+      <li><strong>Devis</strong> : mentions légales pré-remplies, versions successives (V1, V2…), acceptation en ligne par le client depuis son portail, conversion en facture en un clic ;</li>
       <li><strong>Factures</strong> : Factur-X par défaut (PDF/A-3 + XML CII), toutes les mentions obligatoires de l'<strong>article 242 nonies A annexe II du CGI</strong> incluses, numérotation continue automatique selon votre exercice ;</li>
-      <li><strong>Factures d'acompte</strong> : générées sur la base d'un devis ou d'une commande, intégration automatique dans la facture finale ;</li>
       <li><strong>Avoirs</strong> : avec ou sans remboursement, génération à partir d'une facture en deux clics, traçabilité complète ;</li>
-      <li><strong>Situations de travaux</strong> (BTP) : facturation par étape selon avancement, intégration des retenues de garantie ;</li>
-      <li><strong>Bons de commande</strong> et <strong>bons de livraison</strong> : pour les TPE qui ont besoin d'un cycle commande complet.</li>
+      <li><strong>Régimes de TVA</strong> : franchise en base (mention art. 293 B du CGI), autoliquidation BTP en sous-traitance, autoliquidation intracommunautaire, export hors UE — la mention légale adaptée est ajoutée automatiquement.</li>
     </ul>
 
-    <p>Tous les documents sont <strong>archivés automatiquement</strong> pendant la durée légale (10 ans pour les factures), avec coffre-fort numérique conforme aux exigences fiscales.</p>
+    <p>Les factures émises sont <strong>numérotées de façon chronologique et continue</strong> et conservées dans votre espace.</p>
 
     <h2 id="signature"><span class="num">2.</span>Signature électronique Yousign <span style="font-size:11px; padding:3px 10px; border-radius:100px; background:rgba(74,158,255,0.12); color:#4a9eff; font-weight:700; letter-spacing:1px; vertical-align:middle; font-family:'DM Sans',sans-serif;">BIENTÔT</span></h2>
     <p style="padding:12px 16px; background:rgba(74,158,255,0.06); border-left:3px solid #4a9eff; border-radius:6px; font-size:14px; color:var(--text2); margin-bottom:16px;"><strong>Fonctionnalité en cours de développement</strong>, incluse sans surcoût dès sa mise à disposition. Voici ce qui est prévu :</p>
@@ -150,37 +150,36 @@
       <li>Lignes de détail, montants HT par ligne, taux et montants de TVA, total TTC ;</li>
       <li>Conditions de paiement, échéance, IBAN.</li>
     </ul>
-    <p>Photographiez votre facture papier sur le terrain depuis l'<strong>app mobile</strong>, ou glissez-déposez un PDF depuis votre boîte mail : le brouillon de l'écriture est généré <strong>en 5 secondes</strong>. Vous validez (ou corrigez si nécessaire), c'est intégré.</p>
+    <p>Photographiez votre facture papier depuis votre téléphone (application web installable), glissez-déposez un PDF, ou transférez l'email à votre adresse dédiée : le brouillon d'achat est généré automatiquement. Vous validez (ou corrigez si nécessaire), c'est intégré.</p>
     <p><strong>OCR inclus</strong> dans l'abonnement Pro.</p>
 
-    <h2 id="fournisseurs"><span class="num">5.</span>Boîte de réception PDP des achats</h2>
-    <p>À partir de <strong>septembre 2026</strong>, vos fournisseurs B2B vous enverront leurs factures électroniques directement dans votre PDP (en utilisant votre SIRET). IO BILL <strong>centralise ces factures reçues</strong> dans une boîte de réception dédiée :</p>
+    <h2 id="fournisseurs"><span class="num">5.</span>Réception des factures électroniques fournisseurs</h2>
+    <p>Depuis le <strong>1<sup>er</sup> septembre 2026</strong>, toute entreprise assujettie à la TVA doit pouvoir recevoir des factures électroniques via une plateforme agréée. IO BILL reçoit ces factures via <strong>Super PDP, plateforme agréée partenaire</strong>, et les <strong>centralise</strong> dans une boîte de réception dédiée :</p>
     <ul>
       <li>Réception en temps réel des factures électroniques structurées (Factur-X EN 16931 ou UBL) ;</li>
       <li>Pré-traitement automatique : pas besoin d'OCR puisque les données sont déjà structurées ;</li>
       <li>Validation, refus ou demande de modification en un clic ;</li>
       <li>Intégration directe dans la comptabilité (achats) et dans le module TVA (TVA déductible).</li>
     </ul>
-    <p><strong>Inclus dès le plan Pro</strong>.</p>
+    <p><strong>Inclus dans l'abonnement</strong> (500 documents par mois transmis ou reçus via la plateforme agréée).</p>
 
-    <h2 id="ged"><span class="num">6.</span>GED des justificatifs (10 ans)</h2>
-    <p>Tous vos documents (factures émises et reçues, justificatifs de notes de frais, bons de livraison, contrats) sont <strong>centralisés dans une GED native</strong> :</p>
+    <h2 id="ged"><span class="num">6.</span>Justificatifs centralisés</h2>
+    <p>Vos factures émises et vos factures d'achat (avec leur PDF ou leur photo) sont <strong>centralisées dans IO BILL</strong> :</p>
     <ul>
-      <li>Rattachement automatique aux écritures correspondantes ;</li>
-      <li><strong>Conservation 10 ans</strong> conformément à l'article L. 102 B du Livre des Procédures Fiscales ;</li>
-      <li><strong>Recherche full-text</strong> dans le contenu des PDF (lecture OCR transparente) ;</li>
-      <li>Export en masse au format ZIP (pour archivage local ou contrôle fiscal).</li>
+      <li>Rattachement du justificatif à l'achat correspondant ;</li>
+      <li>Recherche et filtres dans vos listes de factures et d'achats ;</li>
+      <li>Téléchargement des factures en ZIP par votre expert-comptable depuis son accès dédié.</li>
     </ul>
 
     <h2 id="tva"><span class="num">7.</span>Module TVA (CA3, CA12, franchise)</h2>
     <p>IO BILL gère les <strong>trois régimes TVA</strong> en vigueur en France :</p>
     <ul>
-      <li><strong>Franchise en base de TVA</strong> (auto-entrepreneurs sous seuil) : suivi automatique du seuil, alerte de dépassement à 90 %, basculement assisté en cas de dépassement ;</li>
+      <li><strong>Franchise en base de TVA</strong> (auto-entrepreneurs sous seuil) : mention « TVA non applicable, art. 293 B du CGI » ajoutée automatiquement ; en cas de dépassement du seuil, vous changez de régime dans les paramètres ;</li>
       <li><strong>Réel simplifié (CA12)</strong> : déclaration annuelle pré-remplie, acomptes semestriels suivis, ajustement de fin d'exercice ;</li>
       <li><strong>Réel normal (CA3)</strong> : déclaration mensuelle ou trimestrielle pré-remplie, contrôle de cohérence (TVA collectée vs TVA encaissée), export pour télédéclaration sur impots.gouv.fr.</li>
     </ul>
     <p>Gestion <strong>multi-taux</strong> (20 %, 10 %, 5,5 %, 2,1 %, 0 %), <strong>autoliquidation</strong> intracommunautaire et hors UE, <strong>TVA sur encaissement</strong> ou <strong>sur débit</strong> selon votre choix d'option.</p>
-    <p><strong>Inclus à partir du plan Pro</strong> (le plan Pro gère uniquement la franchise en base et le réel simplifié, suffisant pour la plupart des freelances).</p>
+    <p><strong>Inclus dans l'abonnement</strong>, quel que soit votre régime.</p>
 
     <h2 id="urssaf"><span class="num">8.</span>Module URSSAF (micro, TNS, assimilé) <span style="font-size:11px; padding:3px 10px; border-radius:100px; background:rgba(74,158,255,0.12); color:#4a9eff; font-weight:700; letter-spacing:1px; vertical-align:middle; font-family:'DM Sans',sans-serif;">BIENTÔT</span></h2>
     <p style="padding:12px 16px; background:rgba(74,158,255,0.06); border-left:3px solid #4a9eff; border-radius:6px; font-size:14px; color:var(--text2); margin-bottom:16px;"><strong>Fonctionnalité en cours de développement</strong>, incluse sans surcoût dès sa mise à disposition. Voici ce qui est prévu :</p>
@@ -223,12 +222,12 @@
       <a class="related-card" href="/fonctionnalites/banque">
         <div class="related-card-label">Trésorerie</div>
         <div class="related-card-title">Banque connectée</div>
-        <div class="related-card-desc">Bridge by BPCE et auto-lettrage IA pour clôturer en 1 jour.</div>
+        <div class="related-card-desc">En cours de développement : connexion DSP2 via un prestataire agréé.</div>
       </a>
       <a class="related-card" href="/fonctionnalites/cabinet">
         <div class="related-card-label">Cabinet</div>
         <div class="related-card-title">Mode expert-comptable</div>
-        <div class="related-card-desc">Console multi-dossiers, export FEC, validation TVA collaborative.</div>
+        <div class="related-card-desc">Accès gratuit pour l'expert-comptable : dossiers, anomalies, messagerie, ZIP.</div>
       </a>
     </div>
 
@@ -237,7 +236,7 @@
   <div class="cta-block">
     <h3>Essayer la facturation IO BILL</h3>
     <p>7 jours d'essai gratuit, sans carte bancaire. Toutes les fonctionnalités du plan Pro accessibles pendant l'essai.</p>
-    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=facturation&utm_campaign=launch" class="btn btn-gold btn-lg" data-plausible-event-name="cta_facturation_essayer">Créer mon compte gratuit →</a>
+    <a href="https://app.iobill.online/?mode=signup&amp;utm_source=iobill.online&amp;utm_medium=site&amp;utm_campaign=fonctionnalites-facturation" class="btn btn-gold btn-lg" data-plausible-event-name="cta_facturation_essayer">Créer mon compte gratuit →</a>
   </div>
 
 </main>
@@ -265,6 +264,7 @@
   <div class="footer-col">
     <strong>Pour qui ?</strong>
     <a href="/pour-qui/freelance">Freelances</a>
+    <a href="/logiciel-facturation-auto-entrepreneur">Auto-entrepreneurs</a>
     <a href="/pour-qui/tpe">TPE / PME</a>
     <a href="/pour-qui/cabinet-comptable">Cabinets comptables</a>
     <a href="/pour-qui/btp">BTP / artisans</a>

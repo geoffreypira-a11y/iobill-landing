@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Factur-X 2026/2027 : tout savoir sur l'obligation de facturation électronique B2B en France | IO BILL</title>
-<meta name="description" content="Au 1er septembre 2026, toutes les entreprises françaises doivent recevoir leurs factures B2B au format électronique. Au 1er septembre 2027, toutes doivent les émettre via une PDP. Calendrier officiel, profils Factur-X, sanctions DGFiP, choix d'une PDP : guide complet pour les freelances, TPE et cabinets."/>
+<title>Factur-X 2026/2027 : l'obligation expliquée | IO BILL</title>
+<meta name="description" content="Réception obligatoire depuis septembre 2026, émission en 2027 pour les TPE : calendrier, formats Factur-X, plateformes agréées, sanctions."/>
 <meta name="keywords" content="factur-x 2026, facturation électronique 2026, facture électronique obligatoire, factur-x 2027, PDP plateforme dématérialisation, EN 16931, PDF/A-3, XML CII, BASIC WL, EXTENDED, calendrier facture électronique France, sanctions DGFiP facturation, e-invoicing France"/>
 <link rel="canonical" href="https://www.iobill.online/fonctionnalites/factur-x"/>
 <link rel="alternate" hreflang="fr-FR" href="https://www.iobill.online/fonctionnalites/factur-x"/>
@@ -16,19 +16,19 @@
 
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="https://www.iobill.online/fonctionnalites/factur-x"/>
-<meta property="og:title" content="Factur-X 2026/2027 : tout savoir sur l'obligation de facturation électronique B2B"/>
-<meta property="og:description" content="Calendrier officiel, profils CII, choix d'une PDP, sanctions, intégration logiciel : le guide complet de l'obligation Factur-X pour freelances, TPE et cabinets."/>
+<meta property="og:title" content="Factur-X 2026/2027 : l'obligation expliquée"/>
+<meta property="og:description" content="Réception obligatoire depuis septembre 2026, émission en 2027 pour les TPE : calendrier, formats Factur-X, plateformes agréées, sanctions."/>
 <meta property="og:image" content="https://www.iobill.online/og-image.png"/>
 <meta property="og:locale" content="fr_FR"/>
 <meta property="og:site_name" content="IO BILL"/>
 <meta property="article:published_time" content="2026-05-05T10:00:00+02:00"/>
-<meta property="article:modified_time" content="2026-05-05T10:00:00+02:00"/>
+<meta property="article:modified_time" content="2026-10-23T08:00:00+02:00"/>
 <meta property="article:author" content="OWL'S INDUSTRY"/>
 <meta property="article:section" content="Conformité"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Factur-X 2026/2027 — l'obligation expliquée"/>
-<meta name="twitter:description" content="Calendrier officiel, PDP, sanctions DGFiP : tout sur la facturation électronique en France."/>
+<meta name="twitter:title" content="Factur-X 2026/2027 : l'obligation expliquée"/>
+<meta name="twitter:description" content="Réception obligatoire depuis septembre 2026, émission en 2027 pour les TPE : calendrier, formats Factur-X, plateformes agréées, sanctions."/>
 <meta name="twitter:image" content="https://www.iobill.online/og-image.png"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -52,7 +52,7 @@
     "logo": {"@type": "ImageObject", "url": "https://www.iobill.online/favicon.svg"}
   },
   "datePublished": "2026-05-05",
-  "dateModified": "2026-05-05",
+  "dateModified": "2026-10-23",
   "inLanguage": "fr-FR"
 }
 </script>
@@ -75,7 +75,7 @@
     {
       "@type": "Question",
       "name": "Qu'est-ce que Factur-X ?",
-      "acceptedAnswer": {"@type":"Answer","text":"Factur-X est un format de facture électronique hybride développé conjointement par la France (FNFE-MPE) et l'Allemagne (FeRD). Une facture Factur-X est un fichier PDF/A-3 (lisible par un humain) dans lequel est embarqué un fichier XML CII (Cross Industry Invoice, lisible par une machine). Ce format est conforme à la norme européenne EN 16931 obligatoire en France à partir du 1er septembre 2026 pour la réception, et du 1er septembre 2027 pour l'émission B2B."}
+      "acceptedAnswer": {"@type":"Answer","text":"Factur-X est un format de facture électronique hybride développé conjointement par la France (FNFE-MPE) et l'Allemagne (FeRD). Une facture Factur-X est un fichier PDF/A-3 (lisible par un humain) dans lequel est embarqué un fichier XML CII (Cross Industry Invoice, lisible par une machine). Ce format est conforme à la norme européenne EN 16931 exigée en France depuis le 1er septembre 2026 pour la réception (et l'émission des grandes entreprises et ETI), et à partir du 1er septembre 2027 pour l'émission B2B des PME, TPE et micro-entreprises."}
     },
     {
       "@type": "Question",
@@ -85,12 +85,12 @@
     {
       "@type": "Question",
       "name": "Quels sont les profils Factur-X et lequel utiliser ?",
-      "acceptedAnswer": {"@type":"Answer","text":"Il existe cinq profils CII : MINIMUM (très limité), BASIC WL (sans détail des lignes, pour les très petites factures), BASIC (avec détail des lignes), EN 16931 (profil cible obligatoire en France pour les transactions B2B), et EXTENDED (avec champs supplémentaires métier). Pour une TPE française, le profil EN 16931 est le bon choix par défaut. IO BILL génère du EN 16931 par défaut, BASIC WL pour les factures simples ne dépassant pas 1 ligne, et EXTENDED sur demande métier."}
+      "acceptedAnswer": {"@type":"Answer","text":"Il existe cinq profils CII : MINIMUM (très limité), BASIC WL (sans détail des lignes, pour les très petites factures), BASIC (avec détail des lignes), EN 16931 (profil cible obligatoire en France pour les transactions B2B), et EXTENDED (avec champs supplémentaires métier). Pour une TPE française, le profil EN 16931 est le bon choix par défaut. IO BILL génère ses factures au profil EN 16931."}
     },
     {
       "@type": "Question",
       "name": "Qu'est-ce qu'une PDP et comment en choisir une ?",
-      "acceptedAnswer": {"@type":"Answer","text":"Une PDP (Plateforme de Dématérialisation Partenaire) est un service immatriculé par la DGFiP qui transmet les factures électroniques entre entreprises et reporte les données fiscales à l'administration. À partir de septembre 2027, toute facture B2B émise en France passera obligatoirement par une PDP. Pour la choisir : vérifier l'immatriculation officielle, la connectivité avec votre logiciel de facturation, le coût (inclus dans le forfait ou en sus), et le périmètre B2C/international si pertinent."}
+      "acceptedAnswer": {"@type":"Answer","text":"Une PDP (Plateforme de Dématérialisation Partenaire) est un service immatriculé par la DGFiP qui transmet les factures électroniques entre entreprises et reporte les données fiscales à l'administration. Au plus tard le 1er septembre 2027 (dès septembre 2026 pour les grandes entreprises et ETI), toute facture B2B entre entreprises établies en France devra transiter par une plateforme agréée (PA, anciennement PDP). Pour la choisir : vérifier l'immatriculation officielle, la connectivité avec votre logiciel de facturation, le coût (inclus dans le forfait ou en sus), et le périmètre B2C/international si pertinent."}
     },
     {
       "@type": "Question",
@@ -105,11 +105,13 @@
     {
       "@type": "Question",
       "name": "Comment IO BILL gère la conformité Factur-X 2026/2027 ?",
-      "acceptedAnswer": {"@type":"Answer","text":"IO BILL génère automatiquement vos factures au format Factur-X (PDF/A-3 + XML CII embarqué), profil EN 16931 par défaut. La transmission via notre PDP partenaire Super PDP (réseau Peppol) est incluse sans surcoût dans l'abonnement Pro à 14,90 € HT/mois, pour répondre à l'obligation d'émission au 1er septembre 2027. La réception des factures électroniques de vos fournisseurs (obligation au 1er septembre 2026) est également incluse."}
+      "acceptedAnswer": {"@type":"Answer","text":"IO BILL génère automatiquement vos factures au format Factur-X (PDF/A-3 + XML CII embarqué), profil EN 16931 par défaut. La transmission via Super PDP, plateforme agréée partenaire, est incluse dans l'abonnement à 14,90 € HT/mois (500 documents par mois), pour répondre à l'obligation d'émission au 1er septembre 2027 des PME, TPE et micro-entreprises. La réception des factures électroniques de vos fournisseurs, obligatoire depuis le 1er septembre 2026, est également incluse."}
     }
   ]
 }
 </script>
+  <!-- Mesure d'audience Vercel Web Analytics : sans cookie, sans donnée personnelle -->
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -124,8 +126,8 @@
     <a href="/tarifs">Tarifs</a>
     <a href="/pour-qui/freelance">Pour qui ?</a>
     <a href="/blog">Blog</a>
-    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=nav&utm_campaign=launch" class="btn btn-ghost" style="padding:10px 22px;font-size:13px;">Connexion</a>
-    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=nav&utm_campaign=launch" class="btn btn-gold" style="padding:10px 22px;font-size:13px;" data-plausible-event-name="cta_top_nav">Essayer 7 jours</a>
+    <a href="https://app.iobill.online/" class="btn btn-ghost" style="padding:10px 22px;font-size:13px;">Connexion</a>
+    <a href="https://app.iobill.online/?mode=signup&amp;utm_source=iobill.online&amp;utm_medium=site&amp;utm_campaign=fonctionnalites-factur-x" class="btn btn-gold" style="padding:10px 22px;font-size:13px;" data-plausible-event-name="cta_top_nav">Essayer 7 jours</a>
   </div>
 </nav>
 
@@ -138,14 +140,14 @@
   <header class="page-header">
     <div class="page-eyebrow">Conformité 2026/2027</div>
     <h1>Factur-X 2026/2027 : <em>l'obligation expliquée.</em></h1>
-    <p class="page-lead">À partir du 1<sup>er</sup> septembre 2026, toutes les entreprises françaises devront recevoir leurs factures B2B au format électronique. À partir du 1<sup>er</sup> septembre 2027, toutes devront les émettre via une PDP. Voici le guide complet : calendrier officiel, profils CII, choix d'une PDP, sanctions, intégration logiciel.</p>
+    <p class="page-lead">Depuis le 1<sup>er</sup> septembre 2026, toutes les entreprises assujetties à la TVA doivent pouvoir recevoir leurs factures B2B au format électronique, et les grandes entreprises et ETI doivent les émettre. Au 1<sup>er</sup> septembre 2027, l'émission devient obligatoire pour les PME, TPE et micro-entreprises, via une plateforme agréée (PA, anciennement appelée PDP). Voici le guide complet : calendrier officiel, profils CII, choix d'une PDP, sanctions, intégration logiciel.</p>
   </header>
 
   <article>
 
     <div class="callout gold">
       <div class="callout-title">⚡ TL;DR — l'essentiel en 30 secondes</div>
-      <p style="margin:0;">À partir de <strong>septembre 2026</strong>, vous devez pouvoir <strong>recevoir</strong> les factures électroniques de vos fournisseurs. À partir de <strong>septembre 2027</strong>, vous devez <strong>émettre</strong> les vôtres au format <strong>Factur-X</strong> (PDF/A-3 + XML CII), via une <strong>PDP</strong> immatriculée par la DGFiP. <strong>Sanctions</strong> : 15 € par facture non conforme, plafonné à 15 000 € par an. <strong>IO BILL</strong> est conforme par défaut sur tous ses plans, avec PDP incluse sans surcoût à partir du plan Pro.</p>
+      <p style="margin:0;">Depuis <strong>septembre 2026</strong>, vous devez pouvoir <strong>recevoir</strong> les factures électroniques de vos fournisseurs. Au <strong>1<sup>er</sup> septembre 2027</strong>, les PME, TPE et micro-entreprises devront <strong>émettre</strong> les leurs dans un format structuré (Factur-X, UBL ou CII), via une <strong>plateforme agréée</strong> par l'administration (les grandes entreprises et ETI y sont soumises depuis septembre 2026). <strong>Sanctions</strong> : 15 € par facture non conforme, plafonné à 15 000 € par an. <strong>IO BILL</strong> génère du Factur-X par défaut et transmet vos factures via Super PDP, plateforme agréée partenaire, inclus dans l'abonnement.</p>
     </div>
 
     <div class="toc">
@@ -259,7 +261,7 @@
 
     <p>Pour une <strong>TPE française classique</strong>, le profil <strong>EN 16931</strong> est le bon choix par défaut. Les profils <strong>MINIMUM</strong> et <strong>BASIC WL</strong> ne sont pas autorisés pour les transactions B2B classiques en France à partir de 2026 — ils restent utiles pour des cas exceptionnels.</p>
 
-    <p>IO BILL génère par défaut le profil <strong>EN 16931</strong>. Le profil <strong>BASIC WL</strong> est généré automatiquement pour les factures simplifiées (1 ligne, 1 taux) si l'utilisateur active cette option, et le profil <strong>EXTENDED</strong> est disponible sur demande pour les usages BTP / situations de travaux.</p>
+    <p>IO BILL génère ses factures au profil <strong>EN 16931</strong>.</p>
 
     <h2 id="pdp"><span class="num">5.</span>PDP : ce qu'il faut savoir avant de choisir</h2>
 
@@ -271,7 +273,7 @@
       <li><strong>Stocke les factures</strong> dans un coffre-fort numérique conforme aux exigences d'archivage légal (durée 10 ans).</li>
     </ul>
 
-    <p>À partir de <strong>septembre 2027, toute facture B2B émise en France passe obligatoirement par une PDP</strong>. Vous ne pouvez pas envoyer un PDF Factur-X par email à votre client : la transmission doit transiter par votre PDP, qui l'achemine vers la PDP de votre client.</p>
+    <p>Au plus tard le <strong>1<sup>er</sup> septembre 2027, toute facture B2B entre entreprises établies en France passe obligatoirement par une plateforme agréée</strong> (dès septembre 2026 pour les grandes entreprises et ETI). Vous ne pouvez pas envoyer un PDF Factur-X par email à votre client : la transmission doit transiter par votre PDP, qui l'achemine vers la PDP de votre client.</p>
 
     <h3>Les 5 critères pour choisir une PDP</h3>
 
@@ -286,7 +288,7 @@
         </tr>
         <tr>
           <td><strong>Connectivité avec votre logiciel</strong></td>
-          <td>Si votre logiciel de facturation n'est pas nativement connecté à la PDP, vous serez en double saisie. La meilleure option est une PDP intégrée à votre logiciel.</td>
+          <td>Si votre logiciel de facturation n'est pas nativement connecté à la PDP, vous serez en double saisie. La meilleure option est un logiciel directement connecté à une plateforme agréée.</td>
         </tr>
         <tr>
           <td><strong>Coût mensuel ou par facture</strong></td>
@@ -355,19 +357,16 @@
       <tbody>
         <tr><td>Génération Factur-X (PDF/A-3 + XML CII)</td><td class="ok">Inclus dans l'abonnement Pro</td></tr>
         <tr><td>Profil EN 16931 par défaut</td><td class="ok">Oui</td></tr>
-        <tr><td>Profil BASIC WL automatique (factures à 1 ligne)</td><td class="ok">Oui (option)</td></tr>
-        <tr><td>Profil EXTENDED (BTP, situations)</td><td class="ok">Oui sur demande</td></tr>
-        <tr><td>Réception des factures électroniques fournisseurs</td><td class="ok">Oui, dès le plan Pro</td></tr>
-        <tr><td>Transmission via PDP partenaire Super PDP (réseau Peppol)</td><td class="ok">Inclus dans l'abonnement Pro, sans surcoût</td></tr>
-        <tr><td>e-reporting B2C automatique</td><td class="ok">Inclus à partir du plan Pro</td></tr>
-        <tr><td>Conservation 10 ans des factures émises et reçues</td><td class="ok">Oui (coffre-fort PDP)</td></tr>
-        <tr><td>Identifiant Chorus Pro / SIRET pour réception</td><td class="ok">Oui, généré automatiquement à l'inscription</td></tr>
+        <tr><td>Réception des factures électroniques fournisseurs</td><td class="ok">Oui</td></tr>
+        <tr><td>Transmission via Super PDP, plateforme agréée partenaire</td><td class="ok">Inclus (500 documents/mois, 0,05 € HT au-delà)</td></tr>
+        <tr><td>Factures B2C transmises pour l'e-reporting</td><td class="ok">Oui, via Super PDP</td></tr>
+        <tr><td>Inscription à l'annuaire de la facturation électronique</td><td class="ok">Via Super PDP, depuis vos paramètres</td></tr>
       </tbody>
     </table>
 
     <div class="callout blue">
       <div class="callout-title">✓ La promesse IO BILL</div>
-      <p style="margin:0;"><strong>Vous payez un seul abonnement, pas de PDP en sus, pas d'option Factur-X facturée à part</strong>. Avec l'abonnement Pro à 14,90 € HT/mois (17,88 € TTC), vous êtes 100 % conforme aux échéances 2026 et 2027 : la réception e-invoicing et l'émission via PDP (Super PDP, réseau Peppol) sont incluses, sans rien faire de plus.</p>
+      <p style="margin:0;"><strong>Vous payez un seul abonnement, pas de plateforme à souscrire en sus, pas d'option Factur-X facturée à part</strong>. Avec l'abonnement à 14,90 € HT/mois (17,88 € TTC), la réception e-invoicing et l'émission via Super PDP, plateforme agréée partenaire, sont incluses (500 documents par mois). IO BILL n'est pas lui-même une plateforme agréée : il s'appuie sur Super PDP pour la transmission.</p>
     </div>
 
     <h2>Voir aussi</h2>
@@ -375,12 +374,12 @@
       <a class="related-card" href="/fonctionnalites/facturation">
         <div class="related-card-label">Fonctionnalité</div>
         <div class="related-card-title">Facturation classique</div>
-        <div class="related-card-desc">Factures, devis, avoirs, factures d'acompte, situations de travaux.</div>
+        <div class="related-card-desc">Factures, devis, avoirs, OCR des achats, aide à la TVA.</div>
       </a>
       <a class="related-card" href="/fonctionnalites/cabinet">
         <div class="related-card-label">Cabinet</div>
         <div class="related-card-title">Mode expert-comptable</div>
-        <div class="related-card-desc">Console multi-dossiers, validation TVA collaborative, FEC standardisé.</div>
+        <div class="related-card-desc">Accès gratuit pour l'expert-comptable : dossiers, anomalies, messagerie.</div>
       </a>
       <a class="related-card" href="/comparatif-logiciels-facturation">
         <div class="related-card-label">Comparatif</div>
@@ -399,7 +398,7 @@
   <div class="cta-block">
     <h3>Conforme 2026/2027 dès la première facture.</h3>
     <p>7 jours d'essai gratuit, sans carte bancaire. PDP incluse à partir du plan Pro.</p>
-    <a href="https://app.iobill.online/?utm_source=site_vitrine&utm_medium=facturx&utm_campaign=launch" class="btn btn-gold btn-lg" data-plausible-event-name="cta_facturx_essayer">Créer mon compte gratuit →</a>
+    <a href="https://app.iobill.online/?mode=signup&amp;utm_source=iobill.online&amp;utm_medium=site&amp;utm_campaign=fonctionnalites-factur-x" class="btn btn-gold btn-lg" data-plausible-event-name="cta_facturx_essayer">Créer mon compte gratuit →</a>
   </div>
 
 </main>
@@ -427,6 +426,7 @@
   <div class="footer-col">
     <strong>Pour qui ?</strong>
     <a href="/pour-qui/freelance">Freelances</a>
+    <a href="/logiciel-facturation-auto-entrepreneur">Auto-entrepreneurs</a>
     <a href="/pour-qui/tpe">TPE / PME</a>
     <a href="/pour-qui/cabinet-comptable">Cabinets comptables</a>
     <a href="/pour-qui/btp">BTP / artisans</a>
